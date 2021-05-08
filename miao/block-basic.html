@@ -7,72 +7,63 @@
   <title>Document</title>
 </head>
 <style>
-  div.a {
+  body {
+    margin: 0px;
+  }
+  .a {
     background-color: red;
+    color: black;
+    margin: 20px;
+    padding:  0 calc(50% - 300px - 20px);
   }
-  div section {
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-  }
-  .b {
-    border: 2px solid black;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
 
+  .b {
+    box-sizing: border-box;
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid black;
   }
+
   .c {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-    height: 4em;
-    padding: 0 10px;
     overflow: auto;
-    box-sizing: border-box;
+    height: 5em;
   }
+
   .d {
-    margin-left: auto;
-    margin-right: auto;
-    width: 560px;
-    height: 80px;
     background-color: violet;
+    height: 4em;
   }
+
   .d:hover {
-    width: 600px;
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: -10px;
+    margin-right: -10px;  /*width margin-right: margin-left: 固定三个会使得margin-right变成auto;*/
   }
 
   .e {
-    width: 0px;
-    height: 0px;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 60px solid;
+    border: 100px solid;
     border-color: transparent transparent orange transparent;
+    margin: 0px auto;
+    height: 0px;
+    width: 0px;
   }
 
+ 
 </style>
 
 <body>
   <div class="a">
-    <section>aaaaa</section>
+    aaaaa
   </div>
   <div class="b">
-    <div class="c">
+    <p class="c">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod quidem reiciendis aspernatur labore autem sed recusandae voluptatibus, fugiat cum laborum fuga, temporibus nesciunt provident. Perferendis at, aliquam quaerat fugiat voluptatibus laborum quia earum omnis ratione saepe sunt delectus. Autem cumque itaque, perspiciatis atque perferendis commodi doloribus, odio, placeat exercitationem vel mollitia praesentium error. Architecto illo officiis voluptas aperiam quo, ipsam aspernatur. Accusamus velit in id, voluptatibus numquam ex quo nesciunt modi ducimus voluptate animi quia eaque nobis earum eligendi recusandae et asperiores necessitatibus sequi voluptas consequatur nisi! Suscipit minima rem, eos sed unde incidunt corrupti eligendi dolores iusto odit odio dolorum! Nemo veritatis totam necessitatibus aut possimus assumenda corporis veniam. Deleniti officiis voluptates a dolore quisquam amet ab ipsa beatae. Et neque consequatur debitis exercitationem cumque est laboriosam mollitia quo atque voluptatem quisquam temporibus dicta illo, repellat eveniet veritatis nam repellendus repudiandae eligendi suscipit hic culpa perspiciatis! Reprehenderit deleniti quia aliquam placeat quod incidunt corporis accusantium quibusdam natus ipsam facere consequuntur facilis officia debitis, maxime velit iusto saepe sed itaque minima alias, quam perferendis nesciunt magni! Magnam quia perspiciatis itaque id nihil, veritatis aspernatur. Perferendis hic recusandae fugiat mollitia corrupti sit, facilis iusto suscipit deserunt harum quas. Perferendis, hic. Aliquid.
-    </div>
+    </p>
     <div class="d">
     </div>
-    <div class="c">
+    <p class="c">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptate, natus itaque doloremque dolorum assumenda, veritatis suscipit autem reiciendis consequatur necessitatibus. Dolorem incidunt aliquid optio ipsa pariatur aliquam accusamus quo, esse numquam reiciendis a commodi quisquam debitis architecto tempora. Enim labore est delectus nam optio earum vel aspernatur, consequuntur dolorem modi at eos maiores, impedit placeat in sapiente! Atque nisi fugiat, aut inventore aspernatur excepturi exercitationem ab laudantium totam vitae autem unde quaerat, eveniet ipsum velit aliquam assumenda. Reiciendis soluta repudiandae ipsa deserunt doloremque laborum maxime a, quibusdam quod ipsam voluptatem sapiente, laudantium perspiciatis numquam temporibus dolores commodi consequuntur tempora cumque! Molestias dolorem pariatur excepturi necessitatibus mollitia. Nesciunt eveniet commodi sequi eos placeat. Eum aut hic eos ad, quia officia quasi, animi ea atque a, odit porro tenetur alias? Numquam natus rem ut cum qui sapiente, ad quis, iste vel expedita odio earum hic! Beatae porro laborum optio error odio illum aliquam maxime recusandae incidunt doloribus. Vitae esse est harum perferendis. Libero ad enim numquam beatae quis nihil, impedit nulla, nisi est soluta voluptatem et molestiae, repellendus corporis dolor sunt? Suscipit repudiandae consectetur aliquam laudantium reprehenderit eos natus accusantium officiis, molestias praesentium! Est sunt doloremque cumque, illum ipsum incidunt delectus.
-    </div>
+    </p>
   </div>
   <div class="e">
   </div>
