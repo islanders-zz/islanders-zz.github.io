@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body, html {
+    margin: 0px;
+    font-size: 0px;
+  }
+
+  div {
+    text-align: center;
+    margin:  20px 20px;
+    border: 2px solid black;
+  }
+  span {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+    margin: 20px 30px;
+    background-image: url(web_heart_animation.png);
+  }
+
+  .heart:hover {
+    background-position: -2800px;
+    transition: 0.5s steps(28);
+  }
+
+  /* .heart:active {
+    background-position: -2800px;
+    transition: 0.5s steps(28) linear;
+  } */
+
+  /* .a:hover .heart{
+    background-position: -2800px;
+    transition: 0.5s steps(28);
+  } */
+
+  /* .heart:hover ~ span {
+    background-position: -2800px;
+    transition: 0.5s steps(28);
+  } */
+
+</style>
+<body>
+  <div class="a">
+    <span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span><span class="heart"></span>
+  </div>
+</body>
+</html>
