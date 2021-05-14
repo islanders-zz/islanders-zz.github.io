@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  html, body {
+    margin: 0px;
+    font-size: 0px;
+  }
+  .window {
+    margin: 20px;
+    box-sizing: border-box;
+  }
+
+  .menu {
+    box-sizing: border-box;
+    border: 2px solid black;
+    width: 550px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: lightslategray;
+  }
+
+  .A {
+    display: inline-block;
+    margin: 10px;
+    font-size: 16px;
+    height: 40px;
+    width: 80px;
+    border: 2px solid black;
+    background-color: blanchedalmond;
+    line-height: 34px;
+    vertical-align: top;
+    position: relative;
+  }
+
+  .B {
+    display: none;
+  }
+
+  .A:hover .B {
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: justify;
+    width: 200px;
+    border: 2px solid black;
+    line-height: 20px;
+    background-color: blanchedalmond;
+    left: -2px;
+    top: 40px;
+    padding: 0px 5px;
+  }
+
+  .D {
+    display: none;
+  }
+
+  .C:hover .D{
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: justify;
+    width: 200px;
+    border: 2px solid black;
+    line-height: 20px;
+    background-color: blanchedalmond;
+    left: 196px;
+    top: 290px;
+    padding: 0px 5px;
+  }
+
+
+
+</style>
+<body>
+  <div class="window">
+    <div class="menu">
+      <span class="A">文件(F)
+        <span class="B">
+          新建文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl + B<br/>
+          新建窗口&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl + Shift +N<hr/>
+          打开文件<br/>
+          打开文件夹<br/>
+          打开工作区<br/>
+          打开最近的文件<hr/>
+          将文件添加的工作区...<br/>
+          将工作区另存为...<hr/>
+          保存<br/>
+          另存为<br/>
+          全部保存<hr/>
+          自动保存<br/>
+          <span class="C">首选项
+            <span class="D">
+              设置<br/>
+              联机服务设置<br/>
+              扩展<hr/>
+              键盘快捷方式<br/>
+              键映射<hr/>
+              用户片段<hr/>
+              颜色主题<br/>
+              产品图标主题<br/>
+              文件图标主题<hr/>
+              设置同步已打开</span>
+          </span><hr/>
+          还原文件<br/>
+          关闭编辑器<br/>
+          关闭文件夹<br/>
+          关闭窗口<hr/>
+          退出
+        </span>
+      </span>
+      <span class="A">编辑(E)</span>
+      <span class="A">选择(S)</span>
+      <span class="A">查看(V)</span>
+      <span class="A">转到(G)</span>
+    </div>
+  </div>
+</body>
+</html>
