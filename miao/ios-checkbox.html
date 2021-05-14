@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body,html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  div.a {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  div.b {
+    display:block;
+    width: 600px;
+    height: 200px;
+    margin:auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid black;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: rgba(20, 20, 20, 0.1);
+  }
+  input {
+    display: none;
+  }
+  input:checked + div.b {
+    xbackground-color: #04BE02;
+    box-shadow: inset 0px 0px 200px 600px #04BE02;
+  }
+
+  input:checked + div.b div.c {
+    left: 400px; 
+  } 
+  div {
+    transition: 0.8s cubic-bezier(.4, .4, .25, 1.15);
+  }
+
+
+  div.c {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    box-shadow:  2px 2px 12px rgb(0, 0, 0, 0.6);
+    top: 0px;
+    left: 0px;
+  }
+</style>
+<body>
+  <div class="a">
+    <label>
+      <input type="checkbox" name="" id=""><div class="b">
+        <div class="c"></div>
+      </div>
+    </label>
+  </div>
+</body>
+</html>
