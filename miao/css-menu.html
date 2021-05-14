@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    width: 400px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    background-color: darkgrey;
+  }
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+
+  hr {
+    margin: 0px;
+  }
+  li {
+    position: relative;
+    white-space: nowrap;
+    background-color: antiquewhite;
+    padding: 5px;
+    text-align: left;
+    font-size: 12px;
+  }
+  ul.menu > li {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  ul ul {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  li:hover {
+    background-color: lightgray;
+  }
+  li:hover > ul {
+    transition: 0.8s;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  ul.menu ul{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+  }
+
+  ul.menu ul ul {
+    position: absolute;
+    top: 0px;
+    left: 100%;
+  }
+</style>
+<body>
+  <div>
+    <ul class="menu">
+      <li>文件
+        <ul>
+          <li>新建文件</li>
+          <li>新建窗口<hr/></li>
+          <li>打开文件</li>
+          <li>打开文件夹...</li>
+          <li>首选项
+            <ul>
+              <li>设置</li>
+              <li>联机服务设置</li>
+              <li>扩展<hr/></li>
+              <li>键盘快捷方式</li>
+              <li>扩展</li>
+            </ul>
+          </li>
+          <li>关闭窗口<hr/></li>
+          <li>退出</li>
+        </ul>
+      </li>
+      <li>编辑
+                <ul>
+                  <li>新建文件</li>
+                  <li>新建窗口
+                    <hr />
+                  </li>
+                  <li>新建文件夹</li>
+                  <li>首选项
+                    <ul>
+                      <li>设置</li>
+                      <li>扩展</li>
+                      <li>扩展</li>
+                      <li>扩展</li>
+                      <li>扩展</li>
+                    </ul>
+                  </li>
+                  <li>新建文件夹</li>
+                  <li>新建文件夹</li>
+                </ul>
+      </li>
+      <li>选择</li>
+      <li>查看</li>
+      <li>转到</li>
+    </ul>
+  </div>
+</body>
+</html>
