@@ -28,7 +28,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    border: 2px solid black;
+    border: 3px solid rgba(20, 20, 20, 0.5);
     border-radius: 100px;
     cursor: pointer;
     background-color: rgba(20, 20, 20, 0.1);
@@ -37,15 +37,30 @@
     display: none;
   }
   input:checked + div.b {
-    xbackground-color: #04BE02;
-    box-shadow: inset 0px 0px 200px 600px #04BE02;
+    box-shadow: inset 0px 0px 200px 600px #4BD763;
   }
 
   input:checked + div.b div.c {
     left: 400px; 
+    width: 200px;
   } 
-  div {
-    transition: 0.8s cubic-bezier(.4, .4, .25, 1.15);
+
+  input:checked + div.b div.d {
+    left: 400px;
+    opacity: 1;
+  }
+
+
+  
+  div.c {
+    transition: 0.93s cubic-bezier(.4, .4, .25, 1.1);
+  }
+  div.d {
+    transition: 1s cubic-bezier(.4, .4, .25, 1.1);
+  }
+
+  div.b{
+    transition: 1s;
   }
 
 
@@ -56,16 +71,29 @@
     box-sizing: border-box;
     position: absolute;
     background-color: white;
-    box-shadow:  2px 2px 12px rgb(0, 0, 0, 0.6);
+    box-shadow:  5px 5px 20px rgb(0, 0, 0, 0.6);
     top: 0px;
     left: 0px;
+  }
+
+    div.d {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    xbox-shadow: -2px 0px 12px rgb(0, 0, 0, 0.6);
+    top: 0px;
+    left: 0px;
+    opacity: 1;
   }
 </style>
 <body>
   <div class="a">
     <label>
       <input type="checkbox" name="" id=""><div class="b">
-        <div class="c"></div>
+        <div class="c"></div><div class="d"></div>
       </div>
     </label>
   </div>
