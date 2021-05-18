@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  table {
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  td {
+    width: 60px;
+    height: 60px;
+  }
+
+  tr, col {
+    border: 4px solid blue;
+  }
+
+  td:hover {
+    border: 4px solid red;
+    cursor: pointer;
+  }
+
+  div.a {
+    width: 60px;
+    height: 60px;
+    border: 4px solid blue;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+  }
+
+  div.a:nth-child(n+4) {
+    margin-left: 64px;
+  }
+  div.a:nth-child(n+7) {
+    margin-left: 128px;
+
+  }
+  div.a:nth-child(3n+4) {
+    margin-top: -196px;
+  }
+  div.a:nth-child(2), div.a:nth-child(3), div.a:nth-child(5), div.a:nth-child(6), div.a:nth-child(8), div.a:nth-child(9) {
+    margin-top: -4px;
+  }
+
+  div.a:hover {
+    cursor: pointer;
+    border: 4px solid red;
+    z-index: 1;
+  }
+
+  div.b {
+  width: 60px;
+  height: 60px;
+  border: 4px solid blue;
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+  float: left;
+  }
+
+  div.b:nth-child(3n+4) {
+    clear: left;
+  }
+  div.b:nth-child(3n+2), div.b:nth-child(3n){
+    margin-left: -4px;
+  }
+  div.b:nth-child(n+4) {
+    margin-top: -4px;
+  }
+
+  div.b:hover {
+  cursor: pointer;
+  border: 4px solid red;
+  z-index: 1;
+  }
+
+  div.block {
+    width: 200px;
+    height: 200px;
+  }
+  
+</style>
+<body>
+<h3>table实现九宫格</h3>
+<div class="block">
+  <table>
+    <col>
+    <col>
+    <col>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<hr>
+<h3>div利用margin实现九宫格</h3>
+<div class="block">
+  <div class="a">1</div>
+  <div class="a">2</div>
+  <div class="a">3</div>
+  <div class="a">4</div>
+  <div class="a">5</div>
+  <div class="a">6</div>
+  <div class="a">7</div>
+  <div class="a">8</div>
+  <div class="a">9</div>
+</div>
+<br>
+<hr>
+<h3>利用float实现九宫格</h3>
+<div class="block">
+  <div class="b">1</div>
+  <div class="b">2</div>
+  <div class="b">3</div>
+  <div class="b">4</div>
+  <div class="b">5</div>
+  <div class="b">6</div>
+  <div class="b">7</div>
+  <div class="b">8</div>
+  <div class="b">9</div>
+</div>
+<br>
+<hr>
+</body>
+</html>
