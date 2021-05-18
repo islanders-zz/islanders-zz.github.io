@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  h3 {
+    text-align: center;
+  }
+  .block_a {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 20px auto;
+    position: relative;
+  }
+  .a {
+    width: 100px;
+    height: 100px;
+    border: 2px solid skyblue;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .aa {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    border: 2px solid aquamarine;
+
+  }
+  
+  .block_b {
+    display: table;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+  }
+
+ div.b { 
+    display: table-cell;
+    vertical-align: middle;
+  } 
+  span.b {
+    border: 2px solid aqua;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  }
+</style>
+<body>
+  <h3>1. 利用绝对定位实现居中</h3>
+  <div class="block_a">
+    <div class="a"></div>
+  </div>
+  <br>
+  <div class="block_a">
+    <div class="aa"></div>
+  </div>
+  <br>
+  <hr>
+  <h3>2. 利用table和table-cell实现居中</h3>
+  <div class="block_b">
+    <div class="b"><span class="b"></span></div>
+  </div>
+  <hr>
+  <div class="block">
+
+  </div>
+</body>
+</html>
