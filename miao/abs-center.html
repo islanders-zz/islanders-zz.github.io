@@ -50,7 +50,7 @@
     text-align: center;
   }
 
- div.b { 
+  div.b { 
     display: table-cell;
     vertical-align: middle;
   } 
@@ -59,6 +59,22 @@
     display: inline-block;
     width: 100px;
     height: 100px;
+  }
+  
+  .block_c {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 2px solid black;
+    line-height: 300px;
+    text-align: center;
+  }
+  span.c {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border: 2px solid tan;
   }
 </style>
 <body>
@@ -76,9 +92,11 @@
   <div class="block_b">
     <div class="b"><span class="b"></span></div>
   </div>
+  <br>
   <hr>
-  <div class="block">
-
+  <h3>3. 利用inline-block实现居中</h3>
+  <div class="block_c">
+    <span class="c"></span>
   </div>
 </body>
 </html>
