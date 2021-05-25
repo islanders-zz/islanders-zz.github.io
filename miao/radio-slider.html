@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  section {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  div {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+  }
+  img {
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    right: -100%;
+    transition: 1s ease;
+  }
+  section input:nth-child(1):checked ~ div img:nth-child(1),
+  section input:nth-child(2):checked ~ div img:nth-child(2),
+  section input:nth-child(3):checked ~ div img:nth-child(3),
+  section input:nth-child(4):checked ~ div img:nth-child(4) {
+    right: 0;
+    z-index: -1;
+  }
+</style>
+<body>
+  <section>
+    <input type="radio" name="a" id="a1" checked>
+    <input type="radio" name="a" id="a2">
+    <input type="radio" name="a" id="a3">
+    <input type="radio" name="a" id="a4">
+  <div>
+    <img src="https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg" alt="">
+    <img src="https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg" alt="">
+    <img src="https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg" alt="">
+    <img src="https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg" alt="">
+  </div>
+  </section>
+</body>
+</html>
