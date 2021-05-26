@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body, html {
+    margin: 0px;
+    height: 100%;
+  }
+  
+  div {
+    box-sizing: border-box;
+    width: 200px;
+    height: 100%;
+    flex-shrink: 0;
+  }
+  section {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  .a {
+    background-color: pink;
+    border-right: 2px solid black;
+  }
+  .c {
+    background-color: aqua;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  }
+  .d {
+    background-color: greenyellow;
+  }
+
+  .b {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: column;
+  }
+
+  .e {
+    width: 100%;
+    height: 150px;
+    background-color: violet;
+    border-bottom: 2px solid black;
+  }
+  .f {
+    width: 100%;
+    height: 100px;
+    flex-grow: 1;
+    background-color: tan;
+    overflow: auto;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.5em;
+    padding: 10px;
+  }
+  
+
+</style>
+<body>
+  <section>
+    <div class="a"></div>
+    <div class="b">
+      <div class="e"></div>
+      <div class="f">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, minima! Omnis, officia distinctio expedita cumque ea ullam voluptatibus molestiae reprehenderit, illo eveniet voluptatum. Aliquam commodi possimus sunt perspiciatis, impedit dignissimos atque distinctio non error sequi velit, delectus ad doloribus enim fugiat amet excepturi alias ipsam doloremque. Voluptatem harum in aperiam laudantium? Libero sed nobis corporis maxime, consectetur iusto corrupti autem accusantium, facere modi cumque assumenda praesentium fugiat saepe commodi, dignissimos temporibus voluptatibus ab labore sint repellat dolor non! Dolores, laudantium! Facere corporis facilis deleniti, blanditiis porro recusandae nihil debitis soluta quas mollitia laudantium ipsum nesciunt. Eum repudiandae exercitationem reiciendis deleniti. Facilis, quae? Tempora eaque iure, adipisci vel cum voluptatibus. Quisquam quaerat unde laborum itaque aliquam amet beatae aspernatur odit culpa. Reiciendis blanditiis facere quam doloremque fuga natus dolorem quaerat corrupti error sunt praesentium veniam laborum aliquam, exercitationem voluptate architecto tenetur consequatur sapiente amet ad quod! Voluptate ea minima maiores, accusantium beatae qui, culpa voluptas incidunt doloribus expedita non quidem? Harum aspernatur sed aperiam perspiciatis quidem minima sunt ab ullam suscipit quas ipsum saepe quisquam omnis, non blanditiis voluptates neque ad veritatis expedita modi quasi et debitis. Possimus facilis maxime deleniti. Aliquam maiores odit incidunt atque sequi, reprehenderit nisi, quam nostrum ipsam ullam est repellat vitae itaque expedita, et magnam explicabo soluta dolores suscipit officiis tempora ea dolorem eos impedit. Porro dignissimos provident veniam quia maxime molestias vitae, asperiores nulla, minus officia repellendus quaerat nesciunt recusandae quod odit laboriosam. Fugit recusandae enim sapiente iste ducimus laboriosam nesciunt omnis atque provident quod.</div>
+    </div>
+    <div class="c"></div>
+    <div class="d"></div>
+  </section>
+</body>
+</html>
