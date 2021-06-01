@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  section {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotateX(0deg)  rotateY(0deg) rotateZ(0deg);
+    }
+
+    100% {
+      transform: rotateX(360deg) rotateY(720deg) rotateZ(1080deg);
+    }
+  }
+  section:hover div:nth-child(1) {
+    transform: rotateX(0deg) translateZ(100px);
+  }
+
+  section:hover div:nth-child(2) {
+    transform: rotateX(180deg) translateZ(100px);
+    background-color: violet;
+  }
+  section:hover div:nth-child(3) {
+    transform: rotateY(90deg) translateZ(100px);
+    background-color: aqua;
+  }
+  section:hover div:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(100px);
+    background-color: chartreuse;
+  }
+  section:hover div:nth-child(5) {
+    transform: rotateX(90deg) translateZ(100px);
+    background-color: chocolate;
+  }
+  section:hover div:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(100px);
+    background-color: yellowgreen;
+  }
+  div {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    text-align: center;
+    line-height: 200px;
+    transform-origin: center center;
+    transition: 1s;
+  }
+  div:nth-child(1) {
+    transform: rotateX(0deg) translateZ(150px);
+    background-color: pink;
+  }
+  div:nth-child(2) {
+    transform: rotateX(180deg) translateZ(150px);
+    background-color: violet;
+  }
+  div:nth-child(3) {
+    transform: rotateY(90deg) translateZ(150px);
+    background-color: aqua;
+  }
+  div:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(150px);
+    background-color: chartreuse;
+  }
+  div:nth-child(5) {
+    transform: rotateX(90deg) translateZ(150px);
+    background-color: chocolate;
+  }
+  div:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(150px);
+    background-color: yellowgreen;
+  }
+</style>
+<body>
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+</body>
+</html>
