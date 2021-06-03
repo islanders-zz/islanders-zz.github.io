@@ -1,101 +1,86 @@
-body, html {
-  width: 100%;
+body{
   margin: 0px;
-  padding: 0px;
+  overflow-y: scroll;
+}
+/* * {
+  border: 1px solid aquamarine;
+} */
+a {
+  text-decoration: none;
 }
 
-.a {
-  min-width: 1226px;
-  xwidth: 100%;
-  height: 40px;
-  background-color: #333;
-}
-.b {
-  width: 1226px;
-  margin: 0px auto;
-  text-align: left;
-  position: relative;
-}
-
-ul {
+ul, li {
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
 
-ul li {
-  display: inline-block; 
-  font-size: 12px;
+div.nav-container {
+  width: 100%;
+  min-width: 1226px;
+  height: 40px;
+  background-color: #333;
 }
 
-ul li a {
+div.nav-content {
+  width: 1226px;
+  height: 40px;
+  margin: 0px auto;
+}
+ul.nav li a:hover {
+  color: #FFFFFF;
+}
+ul.nav li {
+  font-size: 12px;
   display: inline-block;
-  color: #B0B0B0;
-  text-decoration: none;
   line-height: 40px;
 }
 
-ul.left li:nth-child(n + 2)::before {
-  content: " | ";
+ul.nav li a {
+  color: #B0B0B0;
+  line-height: 40px;
+  height: 40px;
+}
+
+ul.nav li a + span {
   color: #424242;
+  margin: 0px 3.6px;
 }
 
-ul.right {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
-
-ul.right li:nth-child(2)::before,
-ul.right li:nth-child(3)::before
- {
-  content: " | ";
-  color: #424242;
-}
-
-li.download a div {
-  display: none;
-}
-li.download a {
+li.download-app {
   position: relative;
 }
-li.download a:hover div {
-  display: block;
-  width: 124px;
-  height: 148px;
-  background-color: white;
+
+li.download-app div {
+  overflow: hidden;
   position: absolute;
   top: 100%;
-  left: -39px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 124px;
+  height: 0px;
   box-shadow: 0px 1px 5px #aaa;
+  text-align: center;
+  line-height: normal;
+  transition: height 1s;
 }
 
-li.download a:hover div img {
-  display: block;
+li.download-app:hover div {
+  height: 148px;
+}
+
+li.download-app div img {
   width: 90px;
   height: 90px;
-  margin: 18px auto 0px auto;
+  margin: 18px 17px 8px 17px;
 }
 
-li.download a:hover div img + span {
+li.download-app div img + span {
   display: block;
-  width: 124px;
   height: 28px;
-  margin: 0px;
-  text-align: center;
-  color: black;
+  width: 100%;
   font-size: 16px;
+  color: black;
 }
 
-li.download a:hover::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0px;
-  height: 0px;
-  border: 10px solid;
-  margin-left: -9px;
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) white rgba(0, 0, 0, 0);
-}
 
