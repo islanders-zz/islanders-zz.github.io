@@ -79,7 +79,7 @@
   var b = Number(prompt("b"))
   var k = parseInt(a / b)
   var res = a - k * b
-  console.log(res)
+  console.log(res.toFixed(4))
 </script>
 
 <script id="ch0103/12">
@@ -122,12 +122,39 @@
   console.log(res.toFixed(3))
 </script>
 
-<!-- <script id="ch0103/17">
+<script id="ch0103/17">
+  var ax = Number(prompt("ax"))
+  var ay = Number(prompt("ay"))
+  var bx = Number(prompt("bx"))
+  var by = Number(prompt("by"))
+  var cx = Number(prompt("cx"))
+  var cy = Number(prompt("cy"))
+  var a = Math.sqrt((ax - bx) * (ax - bx) + (ay - by) * (ay - by))
+  var b = Math.sqrt((bx - cx) * (bx - cx) + (by - cy) * (by - cy))
+  var c = Math.sqrt((ax - cx) * (ax - cx) + (ay - cy) * (ay - cy))
+  console.log(a, b, c)
+  var p = (a + b + c) / 2
+  var S = Math.sqrt(p * (p - a) * (p - b) * (p - c))
+  console.log(S.toFixed(2))
+</script>
+
+<script id="ch0103/18">
   var a = Number(prompt("a"))
   var b = Number(prompt("b"))
-  var c = Number(prompt("c"))
-  var d = Number(prompt("d"))
-  var x = Number(prompt("c"))
-  var y = Number(prompt("d"))
-  var p 
-</script> -->
+  var n = Number(prompt("n"))
+  var res = a + (b - a) * (n - 1)
+  console.log(res) 
+</script>
+
+<script id="ch0103/19">
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var res = a * b
+  console.log(res)
+</script>
+
+<script id="ch0103/20">
+  var n = Number(prompt("n"))
+  var res = math.pow(2, n)
+  console.log(res)
+</script>
