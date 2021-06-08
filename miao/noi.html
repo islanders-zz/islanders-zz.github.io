@@ -304,3 +304,89 @@
   }
 </script>
 
+<script id="ch0104/11">
+  var n = Number(prompt("n"))
+  if (n != 1 && n != 3 && n != 7) {
+    console.log("YES")
+  }
+  else {
+    console.log("NO")
+  }
+</script>
+
+<script id="ch0104/12">
+  var n = Number(prompt("n"))
+  var bike = n / 3.0 + 23 + 27
+  var walk = n / 1.2
+  if (walk > bike) {
+    console.log("Bike")
+  }
+  else {
+    console.log("Walk")
+  }
+</script>
+
+<script id="ch0104/13">
+  var n = Number(prompt("n"))
+  if ( n >= 0 && n <5) {
+    res = -n + 2.5
+  }
+  else if ( n >= 5 && n <10) {
+    res = 2 - 1.5 * (n-3) * (n-3)
+  }
+  else if ( n >= 10 && n < 20) {
+    res = n / 2 - 1.5
+  }
+  console.log(res.toFixed(3))
+</script>
+
+<script id="ch0104/14">
+  var n = Number(prompt("n"))
+  var m = String(prompt("m"))
+  var res = 0;
+  if (n <= 1000) {
+    res = 8;
+  }
+  if (n > 1000) {
+    res = 8 + 4 * Math.ceil((n-1000) / 500)
+  }
+  if (m=="y") {
+    res = res + 5 
+  }
+  console.log(res)
+</script>
+
+<script id="ch0104/15">
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var c = Number(prompt("c"))
+  if (a >= b) {
+    if (a >= c) {
+      max = a
+    }
+    else {
+      max =c
+    }
+  }
+  else {
+    if (b >= c) {
+      max = b
+    }
+    else {
+      max = c
+    }
+  }
+  console.log(max)
+</script>
+
+<script id="ch0104/16">
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var c = Number(prompt("c"))
+  if (a + b > c && a + c > b && b + c > a ) {
+    console.log("YES")
+  }
+  else {
+    console.log("NO")
+  }
+</script>
