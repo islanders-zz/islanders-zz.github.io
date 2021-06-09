@@ -390,3 +390,49 @@
     console.log("no")
   }
 </script>
+
+<script id="ch0104/17">
+  var year = Number(prompt("year"))
+  if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+  {
+    console.log("Y")
+  }
+  else {
+    console.log("N")
+  }
+</script>
+
+<script id="ch0104/18">
+  var x = Number(prompt("x"))
+  var y = Number(prompt("y"))
+  if ((x <= 1 && x >= -1) && (y >= -1 && y <= 1))
+  {
+    console.log("yes")
+  }
+  else {
+    console.log("no")
+  }
+</script>
+
+<script id="ch0104/19">
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var o = String(prompt("o"))
+  var res = 0;
+  if (o === "+") {
+    res = a + b
+  }
+  if (o === "-") {
+    res = a - b
+  }
+  if (o === "*") {
+    res = parseInt(a * b)
+    }
+  if (o === "/") {
+    res = parseInt(a / b)
+  }
+  if (o != "+" && o != "-" && o != "*" && o != "/" ) {
+    res = "Invalid operator!"
+  }
+  console.log(res)
+</script>
