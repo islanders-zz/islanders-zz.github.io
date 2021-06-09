@@ -630,3 +630,29 @@
   }
   console.log(x.toFixed(4))
 </script>
+
+<script id="ch0105/15"> 
+  var r = Number(prompt("r"))
+  var m = Number(prompt("m"))
+  var y = Number(prompt("y"))
+  for (var i = 0; i < y; i++) {
+    m = m * (1 + r / 100)
+  }
+  console.log(parseInt(m))
+</script>
+
+<script id="ch0105/16">
+  var n = Number(prompt("n"))
+  var k = Number(prompt("k"))
+  var house = 200
+  var sum = n
+  var count = 1
+  while(sum < house && count <= 20) {
+    house = house * 1.1
+    sum = sum + n
+    count++
+  }
+  if (count <= 20)  console.log(count)
+  else              console.log("Impossible")
+
+</script>
