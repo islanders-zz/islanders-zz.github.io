@@ -522,3 +522,111 @@
   }
   console.log(max)
 </script>
+
+<script id="ch0105/06">
+  var n = Number(prompt("n"))
+  var max = 0, min = 0
+  for (var i = 0; i < n; i++)
+  {
+    var x = Number(prompt("x"))
+    if (x > max) max = x
+    if (x < min) min = x  
+  }
+  var res = max - min
+  console.log(res) 
+</script>
+
+<script id="ch0105/07">
+  var n = Number(prompt("n"))
+  var x = 0, y = 0, z = 0, sum = 0
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt("a"))
+    var b = Number(prompt("b"))
+    var c = Number(prompt("c"))
+    x += a
+    y += b
+    z += c
+  }
+  sum = x + y + z
+  console.log(x, y, z, sum)
+</script>
+
+<script id="ch0105/08">
+  var n = Number(prompt("n"))
+  var res = (n - 2) * 180
+  for (var i = 1; i <= n-1; i++) {
+    var x = Number(prompt("x"))
+    res = res - x
+  }
+  console.log(res)
+</script>
+
+<script id="ch0105/09">
+  var m = Number(prompt("m"))
+  var n = Number(prompt("n"))
+  var sum = 0, i
+  if (m % 2) {
+      i = m
+    }
+    else {
+      i = m + 1
+    }
+  for (; i <= n; i = i + 2) {
+    sum = sum + i 
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/10">
+  var m = Number(prompt("m"))
+  var n = Number(prompt("n"))
+  var sum = 0
+  for (var i = m; i <= n; i++) {
+    if (i % 17 == 0) {
+      sum += i
+    }
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/11">
+  var n = Number(prompt("n"))
+  var x = 0 ,y = 0, z = 0
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt("a"))
+    if (a == 1) x++
+    if (a == 5) y++
+    if (a == 10) z++
+  }
+  console.log(x, y, z)
+</script>
+
+<script id="ch0105/12">
+  var n = Number(prompt("n"))
+  var m = Number(prompt("m"))
+  var res = 0 
+  for (var i = 0; i < n; i++) {
+    var x = Number(prompt("x"))
+    if (x == m) res++
+  }
+  console.log(res)
+</script>
+
+<script id ="ch0105/13">
+  var n = Number(prompt("n"))
+  var m = Number(prompt("m"))
+  var res = 1  
+  for (var i = 0; i < m; i++) {
+    res = res * n
+  }
+  console.log(res)
+</script>
+
+<script id="ch0105/14">
+  var x = Number(prompt("x"))
+  var n = Number(prompt("n"))
+  for (var i = 0; i < n; i++) {
+    x = x * 1.001
+  }
+  console.log(x.toFixed(4))
+</script>
