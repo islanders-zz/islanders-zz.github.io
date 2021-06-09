@@ -441,11 +441,25 @@
   var a = Number(prompt("a"))
   var b = Number(prompt("b"))
   var c = Number(prompt("c"))
-  var x = 0, y = 0  
+  var x = 0, y = 0
   var delta = b * b - 4 * a * c
   if (delta == 0) {
-    
+    x = -b / 2 / a
+    y = x
+    console.log("x1=x2" + x)
   } 
+  else if (delta > 0) {
+    x = (-b + Math.sqrt(delta)) / 2 / a
+    y = (-b - Math.sqrt(delta)) / 2 / a  
+    console.log("x1="+ x + ";x2=" + y)
+  } 
+  else {
+    x = -b / 2 / a
+    x = x.toFixed(5)
+    y =  Math.sqrt(-delta) / 2 / a
+    y = y.toFixed(5) 
+    console.log("x1=" + x + "+" + y +"i;x2=" + x + "-" + y +"i")
+  }
 </script>
 
 <script id="ch0104/21">
