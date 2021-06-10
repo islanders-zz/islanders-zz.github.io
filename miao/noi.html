@@ -525,7 +525,7 @@
 
 <script id="ch0105/06">
   var n = Number(prompt("n"))
-  var max = 0, min = 0
+  var max = -1, min = 2000
   for (var i = 0; i < n; i++)
   {
     var x = Number(prompt("x"))
@@ -654,5 +654,87 @@
   }
   if (count <= 20)  console.log(count)
   else              console.log("Impossible")
+
+</script>
+
+<script id="ch0105/17">
+  var n = Number(prompt("n"))
+  let arr = []
+  arr[0] = 1
+  arr[1] = 1
+  for (var i = 2; i < n; i++ ) {
+    arr[i] = arr[i - 1] + arr[i - 2]
+  }
+  console.log(arr[n-1])
+</script>
+
+<script id="ch0105/18">
+  var n = Number(prompt("n"))
+  var a = Number(prompt("a"))
+  var b = Number(prompt("b"))
+  var x = b / a
+  for (var i = 1; i <= n - 1; i++) {
+    var c = Number(prompt("c"))
+    var d = Number(prompt("d"))
+    var res = d / c
+    if (res - x > 0.05) {
+      console.log("better")
+    }
+    else if (x - res > 0.05) {
+      console.log("worse")
+    }
+    else {
+      console.log("same")
+    }
+  }
+</script>
+
+<script id="ch0105/19">
+  var n = Number(prompt("n"))
+  var res = 0 
+  for (var i = 0; i < n; i++) {
+    var x = Number(prompt("x"))
+    var y = Number(prompt("y"))
+    var num = Number(prompt("num"))
+    res = 2 * Math.sqrt(x * x + y * y) / 50 + 1.5 * num
+  }
+  console.log(Math.ceil(res))
+</script>
+
+<script id="ch0105/20">
+  var height = Number(prompt("height")) 
+  var sum = height
+  var res = height
+  for (var i = 1; i <= 10; i++ )
+  { 
+    res = res / 2 
+  }
+  for (var i = 2 ; i <= 10; i++) {
+    height = height / 2
+    sum = sum + height * 2  
+  }
+  console.log(sum.toFixed(4) ,res.toFixed(7))
+</script>
+
+<script id="ch0105/21">
+  var n = Number(prompt("n"))
+  var res = 0
+  while (n != 1) {
+    if(n%2) {
+      res = n
+      n = n * 3 + 1
+      console.log(res+"*3+1="+n)
+    }
+    if(n % 2 == 0) {
+      res = n
+      n = n / 2
+      console.log(res+"/2="+n)
+    }
+  }
+  console.log("End")
+</script>
+
+<script id="ch0105/22">
+  var sum = 0
 
 </script>
