@@ -738,3 +738,35 @@
   var sum = 0
 
 </script>
+
+<script id="ch0105/23">
+  var sum = Number(prompt("sum"))
+  var n = Number(prompt("n"))
+  var res = n
+  for (var i = 0; i < n; i++ ) {
+     var x = Number(prompt("x"))
+     if (sum - x >= 0) {
+       sum = sum - x
+       res-- 
+     }
+  }
+  console.log(res)
+</script>
+
+<script id="ch0105/24">
+  var n = Number(prompt("n"))
+  var res = 0
+  var max = 0
+  for (var i = 0; i < n; i++) {
+    var x = Number(prompt("x"))
+    var y = Number(prompt("y"))
+    if ( x >= 90 && x <= 140 && y >= 60 && y <= 90) {
+      res++
+    }
+    else {
+      res = 0
+    }
+    if (res > max) max = res
+  }
+  console.log(max)
+</script>
