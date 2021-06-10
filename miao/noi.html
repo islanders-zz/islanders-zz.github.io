@@ -736,7 +736,6 @@
 
 <script id="ch0105/22">
   var sum = 0
-
 </script>
 
 <script id="ch0105/23">
@@ -769,4 +768,63 @@
     if (res > max) max = res
   }
   console.log(max)
+</script>
+
+<script id="ch0105/25">
+
+</script>
+
+<script id="ch0105/26">
+  var n = Number(prompt("n"))
+  var res = 0
+  for (var i = 0; i < n; i++) {
+    var num = Number(prompt("num"))
+    var a = num % 10 
+    num = (num - a) / 10
+    var b = num % 10
+    num = (num - b) / 10
+    var c = num % 10
+    var d = (num - c) / 10 
+    if (a - d - c - b > 0) res++
+  }
+  console.log(res)
+</script>
+
+<script id="ch0105/27">
+  var k = Number(prompt("k"))
+  var sum = 0
+  var i
+  for (i = 1; ; i++) {
+    sum = sum + 1 / i
+    if (sum > k) break
+  }
+  console.log(i)
+</script>
+
+<script id="ch0105/28">
+  var num = Number(prompt("num"))
+  while(parseInt(num) != 0 ) {
+    console.log(num % 10)
+    num = parseInt(num / 10)
+  }
+</script>
+
+<script id="ch0105/29">
+  var num = Number(prompt("num"))
+  var flag = 1
+  if (num < 0) {
+    num = -num
+    flag = 0
+  }
+  var sum = 0
+  var res
+  while (parseInt(num) != 0) {
+    res = num % 10
+    sum = sum * 10 + res 
+    num = parseInt(num / 10) 
+  }
+  if (flag == 0) {
+    sum = -sum 
+  }
+  console.log(sum)
 </script>
