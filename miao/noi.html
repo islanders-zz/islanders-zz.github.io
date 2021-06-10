@@ -735,7 +735,7 @@
 </script>
 
 <script id="ch0105/22">
-  var sum = 0
+
 </script>
 
 <script id="ch0105/23">
@@ -827,4 +827,49 @@
     sum = -sum 
   }
   console.log(sum)
+</script>
+
+<script id="ch0105/30">
+  var num = Number(prompt("n"))
+  var k = Number(prompt("k"))
+  var count = 0
+  var res = 0
+  if (num % 19 == 0) {
+    while (num != 0) {
+      res = num % 10 
+      if(res == 3) {
+        count++
+      }
+      num = parseInt(num / 10)
+    }
+    if (count == k) console.log("YES")
+  }
+  else {
+    console.log("NO")
+  }
+</script>
+
+<script id="ch0105/31">
+  var n = Number(prompt("n"))
+  var m = Number(prompt("m"))
+  var arr = []
+  arr [0] = 0
+  for (var i = 1; i <= n; i++) {
+    arr[i] = 1
+  }
+  for (var i =1; i <= m; i++) {
+    for (var j =1; j <= n; j++) {
+      if (j % i == 0) {
+        if (arr[j] == 0) {
+          arr[j] = 1
+        }
+        else if (arr[j]== 1) {
+          arr[j] = 0
+        }
+      }
+    }
+  }
+  for (var i =1; i <= n; i++) {
+    if(arr[i] == 0) console.log(i)
+  }
 </script>
