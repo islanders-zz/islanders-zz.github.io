@@ -870,6 +870,27 @@
     }
   }
   for (var i =1; i <= n; i++) {
-    if(arr[i] == 0) console.log(i+",")
+    if(arr[i] == 0) console.log(i)
   }
+</script>
+
+<script id="ch0105/32">
+  var n = Number(prompt("n"))
+  var arrq = []
+  var arrp = []
+  arrq[1] = 2
+  arrp[1] = 1
+  for (var i = 2; i <= n; i++) {
+    arrq[i] = arrq[i - 1] + arrp[i - 1]
+    arrp[i] = arrq[i-1]
+  }
+  var sum = 0 
+  for (var i = 1; i <= n; i++ ) {
+    sum =sum + arrq[i] / arrp[i]
+  }
+  console.log(sum.toFixed(4))
+</script>
+
+<script id="ch0105/33">
+  
 </script>
