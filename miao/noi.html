@@ -1092,5 +1092,30 @@
 </script>
 
 <script id="ch0105/42">
-
+  var h = Number(prompt("h"))
+  var w = Number(prompt("w"))
+  var c = String(prompt("char"))
+  var s = Number(prompt("s"))
+  var i, j, res ,n
+  if(s == 0) {
+    for (i = 1; i <= h; i++) {
+      res = ""
+      if (i == 1 || i == h) {
+        n = w
+        while (n--) {
+          res = res + c
+        }
+        console.log(res)
+    }
+      else {
+        n = w - 2
+        res = res + c
+        while (n--) {
+          res = res + " "
+        }
+        res = res + c
+        console.log(res)
+    }
+    }
+  }
 </script>
