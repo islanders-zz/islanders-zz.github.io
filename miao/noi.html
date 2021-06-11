@@ -734,10 +734,6 @@
   console.log("End")
 </script>
 
-<script id="ch0105/22">
-
-</script>
-
 <script id="ch0105/23">
   var sum = Number(prompt("sum"))
   var n = Number(prompt("n"))
@@ -768,10 +764,6 @@
     if (res > max) max = res
   }
   console.log(max)
-</script>
-
-<script id="ch0105/25">
-
 </script>
 
 <script id="ch0105/26">
@@ -1061,4 +1053,46 @@
     sum = sum + arr[i]
   }
   console.log(sum)
+</script>
+
+<script id="ch0105/22">
+  var sum = 0
+  var res = 0
+  var i
+  for (i = 1; i <= 12; i++) {
+    var x = Number(prompt("x"))
+    res = res + 300 - x
+    if (res >= 100) {
+      sum = sum + parseInt(res / 100) * 100
+      res = res - parseInt(res / 100) * 100
+    }
+    if (res < 0) {
+      break;
+    }
+  }
+  if (i == 13) {
+      console.log(sum * 1.2 + res)
+    }
+    else {
+      console.log(-i)
+    }
+</script>
+
+<script id="ch0105/25">
+  var arr = []
+  for(var a = 0; a < 7; a++) {
+    for(var b = 0; b < 7; b++) {
+      for (var c = 0; c < 7; c++) {
+        if(a * 49 + b * 7 + c * 1 == a * 1 + b * 9 + c * 81) {
+          arr[0] = a
+          arr[1] = b
+          arr[2] = c
+          break
+        }
+      }
+    }
+  }
+  console.log(arr[0] * 49 + arr[1] * 7 + arr[2])
+  console.log("" + arr[0] + arr[1] + arr[2])
+  console.log("" + arr[2] + arr[1] + arr[0])
 </script>
