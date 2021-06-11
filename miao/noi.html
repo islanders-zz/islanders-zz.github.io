@@ -1046,5 +1046,19 @@
 </script>
 
 <script id="ch0105/45">
-  
+  var days = Number(prompt("days"))
+  var arr = []
+  var sum = 0
+  var cnt = 1
+  for (var i = 1; i <= days; i++) {
+    var res = i
+    while(res--) {
+      arr.push(cnt)
+    }
+    cnt++
+  }
+  for (var i = 0; i <= days - 1; i++) {
+    sum = sum + arr[i]
+  }
+  console.log(sum)
 </script>
