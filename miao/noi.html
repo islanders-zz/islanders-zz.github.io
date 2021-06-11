@@ -905,7 +905,7 @@
   console.log(res.toFixed(4))
  </script>
 
- <script id="ch0105/34">
+<script id="ch0105/34">
   var n = Number(prompt("n"))
   var sum = 0
   var res = 1
@@ -914,9 +914,9 @@
     sum = sum + res 
   }
   console.log(sum)
- </script>
+</script>
 
- <script id="ch0105/35">
+<script id="ch0105/35">
   var n = Number(prompt("n"))
   var sum = 1
   var res = 1
@@ -925,9 +925,9 @@
     sum = sum + 1 / res
   }
   console.log(sum.toFixed(10))
- </script>
+</script>
 
- <script id="ch0105/36">
+<script id="ch0105/36">
   var x = Number(prompt("x"))
   var n = Number(prompt("n"))
   var sum = 0
@@ -935,4 +935,115 @@
     sum = sum + Math.pow(x,i)
   }
   console.log(sum.toFixed(2))
- </script>
+</script>
+
+<script id="ch0105/37">
+  var M = Number(prompt("M"))
+  var N = Number(prompt("N"))
+  var X = Number(prompt("X"))
+  var a = Math.floor(X / M)
+  var b = Math.floor(M / N)
+  var res = a * b + N
+  console.log(res)
+</script>
+<script id="ch0105/38">
+  var N = Number(prompt("N"))
+  while(N--) {
+    var n = Number(prompt("n"))
+    var arr = []
+    for (var i = 0; i <= 100; i++) {
+      arr[i] = 0
+    }
+    for (var i = n; i >= 0; i--) {
+      arr[i] = Number(prompt("c"))
+    }
+    if (arr[1] == 0) {
+      console.log(0)
+    }
+    else {
+      for (var j = n; j > 0; j--) {
+        arr[j] = arr[j] * j 
+        console.log(arr[j])
+       }
+    }
+  }
+</script>
+
+<script id="ch0105/39">
+  var n = Number(prompt("n"))
+  var sum = 0
+  for (var i = 0; i <= n; i++) {
+    var a = i % 10
+    var b = parseInt(i / 10) % 10
+    if(i % 7 && a != 7 && b != 7 )
+    {
+      sum = sum + i*i
+    }
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/40">
+  var n = Number(prompt("n"))
+  var res = 0
+  for (var i = 1; i <= n; i++) {
+    var x = i
+    while(x != 0) {
+      if (x % 10 == 1) {
+        res++
+      }
+      x = parseInt(x / 10)
+    }
+  }
+  console.log(res)
+</script>
+
+<script id="ch0105/41">
+  var n = Number(prompt("n"))
+  var m = Number(prompt("m"))
+  var res = 0
+  for (var i = n; i <= m; i++) {
+    var x = i
+    while (x != 0) {
+      if (x % 10 == 2) {
+        res++
+      }
+      x = parseInt(x / 10)
+    }
+  }
+  console.log(res)
+</script>
+
+<script id="ch0105/43">
+  var n = Number(prompt("n"))
+  var res
+  for (var i = n-1 ; i >=  2; i--) {
+    if( n % i == 0) {
+      res = i
+      break
+    }
+  }
+  console.log(res)
+</script>
+
+<script id="ch0105/44">
+  var N = Number (prompt("N"))
+  var arr = [] 
+  for (var n = 2; n < 10000; n++) {
+    var flag = 1
+    for(var i = 2; i * i <= n; i++) {
+      if (n % i == 0) {
+        flag = 0
+        break
+      }
+    }
+    if (flag == 1) {
+      arr.push(n)
+    }
+  }
+  console.log(arr[N-1])
+</script>
+
+<script id="ch0105/45">
+  
+</script>
