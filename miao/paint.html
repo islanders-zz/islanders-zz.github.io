@@ -109,5 +109,24 @@
       dot(i, j, "pink")
     }
   }
+  
+  for (var i = 0; i <= 2 * Math.PI; i = i + Math.PI / 180) {
+    dot(250 + 50 * Math.cos(i), 250 + 50 * Math.sin(i), "violet")
+  }
+  for (var i = 0; i <= 2 * Math.PI; i = i + Math.PI / 10000) {
+    dot(250 + 200 * Math.cos(i), 250 + 200 * Math.sin(i), "violet")
+  }
+
+  for (var x = 20; x <= 220; x++) {
+    for (var y = 150; y <= 350; y++) {
+      if (Math.pow((x-120), 2) + Math.pow((y-250), 2) <= 10000) {
+        dot(x, y, "lightgreen")
+      }
+    }
+  }
+
+
+
+
 </script>
 </html>
