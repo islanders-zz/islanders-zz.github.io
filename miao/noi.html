@@ -1135,9 +1135,9 @@
    } 
 
    if (flag == 1) {
-     return true
+     return "YES"
    }
-   else return false
+   else return "NO"
   }
 </script>
 
@@ -1162,7 +1162,7 @@
   function primes(N) {
     for (let n = 1; n <= N; n++)
     {
-      if(prime(n)) {
+      if(prime(n) == "YES") {
         console.log(n)
       }
     }
@@ -1199,9 +1199,9 @@
       }
     }
     if (sum == N) {
-      return true
+      return "YES"
     }
-    else return false
+    else return "NO"
   }
 </script>
 
@@ -1225,7 +1225,7 @@
   }
   function completeNumbers(N) {
     for (let i = 1; i <= N; i++) {
-      if(completeNumber(i)&& i != 1) {
+      if(completeNumber(i) == "YES" && i != 1) {
         console.log(i)
       }
     }
@@ -1241,9 +1241,9 @@
       res = parseInt(res / 10)
     }
     if (sum == N) {
-    return true
+    return "YES"
     }
-    else return false
+    else return "NO"
   }
 </script>
 
