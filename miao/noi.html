@@ -1119,3 +1119,53 @@
     }
   }
 </script>
+
+<script id="prime">
+  function prime(N) {
+   if (N < 2) {
+     return false
+   }
+   
+   let flag = 1 
+   for (let i = 2; i * i <= N; i++) {
+      if (N % i == 0) {
+        flag = 0 
+        break
+      }
+   } 
+
+   if (flag == 1) {
+     return true
+   }
+   else return false
+  }
+</script>
+
+<script id="primes">
+  function prime(N) {
+    if (N < 2) {
+      return false
+    }
+    let flag = 1
+    for (let i = 2; i * i <= N; i++) {
+      if (N % i == 0) {
+        flag = 0
+        break
+      }
+    }
+    if (flag == 1) {
+      return true
+    }
+    else return false
+  }
+  
+  function primes() {
+    for (let n = 1; n <= 1000; n++)
+    {
+      if(prime(n)) {
+        console.log(n)
+      }
+    }
+  }
+</script>
+
