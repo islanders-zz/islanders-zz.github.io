@@ -1159,8 +1159,8 @@
     else return false
   }
   
-  function primes() {
-    for (let n = 1; n <= 1000; n++)
+  function primes(N) {
+    for (let n = 1; n <= N; n++)
     {
       if(prime(n)) {
         console.log(n)
@@ -1169,3 +1169,129 @@
   }
 </script>
 
+<script id="lcf&lcm">
+  function lcf(a, b) {
+    let m = a, n = b
+    let temp = 0
+    while(m % n != 0) {
+      temp = m % n 
+      m = n 
+      n = temp
+    }
+    return n
+  }
+  function lcm(a, b) {
+    return a * b / lcf(a,b)
+  }
+</script>
+
+<script id="complete-number">
+  function completeNumber(N) {
+    let sum = 1 
+    for (let i = 2; i * i <= N; i++) {
+      if (N % i == 0) {
+        if (i != N / i) {
+          sum = sum + i + N/i
+        }
+        else {
+          sum = sum + i
+        }
+      }
+    }
+    if (sum == N) {
+      return true
+    }
+    else return false
+  }
+</script>
+
+<script id="complete-numbers">
+  function completeNumber(N) {
+    let sum = 1
+    for (let i = 2; i * i <= N; i++) {
+      if (N % i == 0) {
+        if (i != N / i) {
+          sum = sum + i + N / i
+        }
+        else {
+          sum = sum + i
+        }
+      }
+    }
+    if (sum == N) {
+      return true
+    }
+    else return false
+  }
+  function completeNumbers(N) {
+    for (let i = 1; i <= N; i++) {
+      if(completeNumber(i)&& i != 1) {
+        console.log(i)
+      }
+    }
+  }
+</script>
+
+<script id="palindrom">
+  function palindrom(N) {
+    let sum = 0
+    let res = N 
+    while(res != 0) {
+      sum = sum * 10 + res % 10
+      res = parseInt(res / 10)
+    }
+    if (sum == N) {
+    return true
+    }
+    else return false
+  }
+</script>
+
+<script id="narcissistic">
+  function narcissistic(N) {
+    let cnt = 0
+    let sum = 0
+    let res = N
+    while(res) {
+      cnt++
+      res = parseInt(res / 10)
+    }
+    res = N
+    while (res) {
+      sum = sum + Math.pow(res%10, cnt)
+      res = parseInt(res / 10)
+    }
+    if (sum == N) {
+      return true
+    }
+    else return false
+  }
+</script>
+
+<script id="narcissistics">
+  function narcissistic(N) {
+    let cnt = 0
+    let sum = 0
+    let res = N
+    while (res) {
+      cnt++
+      res = parseInt(res / 10)
+    }
+    res = N
+    while (res) {
+      sum = sum + Math.pow(res % 10, cnt)
+      res = parseInt(res / 10)
+    }
+    if (sum == N) {
+      return true
+    }
+    else return false
+  }
+  function narcissistics(N) {
+    for (let i = 1; i <= N; i++) {
+      if (narcissistic(i) && i >= 100) {
+        console.log(i)
+      }
+    }
+  }
+</script>
