@@ -1295,3 +1295,56 @@
     }
   }
 </script>
+
+<script id="weekday" >
+  function weekday(year, month, day) {
+    let sum = 0 
+    for (let i = 1; i < year; i++) {
+      if((year % 400 ==0) || (year % 4 == 0 && year % 100 !=0) ) {
+        sum = sum + 366 
+      }
+      else {
+        sum = sum + 365 
+      }
+    }
+    let normalMonthDays =[]
+    let leapMonthDays = []
+    for (let i = 1; i <= 12; i++) {
+      if(i == 1 || i == 3 || i == 5 || i == 7|| i == 8|| i== 10 || i== 12) {
+        normalMonthDays[i] = 31
+        leapMonthDays[i] = 31
+      }
+      else if(i == 2) {
+        normalMonthDays[i] = 28
+        leapMonthDays[i] = 29
+      }
+      else {
+        normalMonthDays[i] = 30
+        leapMonthDays[i] = 30
+      }
+    }
+    if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
+      for (let i = 1; i < month; i++) {
+        sum = sum + leapMonthDays[i]
+      }
+    }
+    else {
+      for (let i = 1; i < month; i++) {
+        sum = sum + normalMonthDays[i]
+      }
+    }
+    sum = sum + day
+    let res = sum % 7
+    return res
+  }
+</script>
+
+<script id="sqrt">
+  function sqrt(N) {
+    for (let i = 0; i <= N; i = i + 0.005) {
+      if (Math.abs(i * i - N) <= 0.01) {
+        return i
+      }
+    }
+  }
+</script>
