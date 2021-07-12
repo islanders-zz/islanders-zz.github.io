@@ -40,6 +40,10 @@ var islanders_zz = function () {
     return array[array.length - 1]
   }
 
+  function head(array) {
+    if (!array.length) return undefined
+    return array[0]
+  }
   function reverse(array) {
     let res = new Array()
     if (!array.length) return res
@@ -53,6 +57,7 @@ var islanders_zz = function () {
     drop: drop,
     dropRight: dropRight,
     last: last,
-    reverse: reverse
+    reverse: reverse,
+    head: head
   }
 } ()
