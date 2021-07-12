@@ -28,9 +28,15 @@ var islanders_zz = function () {
     return res
   }
   
+  function last(array) {
+    if (!array.length) return undefined
+    return array[array.length - 1]
+  }
+
   return {
     chunk: chunk,
     compact: compact,
-    drop: drop
+    drop: drop,
+    last: last
   }
 } ()
