@@ -8,7 +8,6 @@ var islanders_zz = function () {
       res[i] = new Array()
       for (let j = 0; j < size && k < array.length; j++) res[i].push(array[k++])
     }
-
     return res
   }
 
@@ -22,8 +21,17 @@ var islanders_zz = function () {
     return res
   }
 
+  function drop(array, n = 1) {
+    let len = array.length
+    let res = new Array()
+    if (n >= length) return res
+    for (let i = 1; i <= n; i++) res.pop()
+    return res
+  }
+  
   return {
     chunk: chunk,
-    compact: compact
+    compact: compact,
+    drop: drop
   }
 } ()
