@@ -6,7 +6,7 @@ var islanders_zz = function () {
     let k = 0
     for (let i = 0; i < len; i++) {
       res[i] = new Array(size)
-      for (let j = 0; j < size; j++) res[i][j] = array[k++]
+      for (let j = 0; j < size && k < array.length; j++, k++) res[i][j] = array[k]
     }
     return res
   }
