@@ -5,8 +5,8 @@ var islanders_zz = function () {
     let res = new Array()
     let k = 0
     for (let i = 0; i < len; i++) {
-      res[i] = new Array(size)
-      for (let j = 0; j < size && k < array.length; j++) res[i][j] = array[k++]
+      res[i] = new Array()
+      for (let j = 0; j < size && k < array.length; j++) res[i].push(array[k++])
     }
 
     return res
