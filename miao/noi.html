@@ -1340,11 +1340,18 @@
 </script>
 
 <script id="sqrt">
+  // function sqrt(N) {
+  //   for (let i = 0; i <= N; i = i + 0.001) {
+  //     if (Math.abs(i * i - N) <= 0.01) {
+  //       return i
+  //     }
+  //   }
+  // }
   function sqrt(N) {
-    for (let i = 0; i <= N; i = i + 0.005) {
-      if (Math.abs(i * i - N) <= 0.01) {
-        return i
-      }
+    let x = N / 5
+    while(Math.abs(x * x - N) >= 0.0001) {
+      x = x - (x * x - N) / x / 2
     }
+    return x
   }
 </script>
