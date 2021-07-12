@@ -22,6 +22,13 @@ var islanders_zz = function () {
   }
 
   function drop(array, n = 1) {
+    let res = new array()
+    if (n >= array.length) return res
+    for (let i = n; i < array.length; i++) res.push(array[i])
+    return res
+  }
+
+  function dropRight(array, n = 1) {
     let res = new Array()
     if (n >= array.length) return res
     for (let i = 0; i < array.length - n; i++) res.push(array[i])
@@ -37,6 +44,7 @@ var islanders_zz = function () {
     chunk: chunk,
     compact: compact,
     drop: drop,
+    dropRight: dropRight,
     last: last
   }
 } ()
