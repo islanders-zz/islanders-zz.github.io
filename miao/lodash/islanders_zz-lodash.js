@@ -15,7 +15,7 @@ var islanders_zz = function () {
   function compact(array) {
     let res = new Array()
     for (let i = 0; i < array.length; i++) {
-      if (array[i] != "false" && array[i] != "0" && array[i] != "null" && array[i] != "" && array[i] != NaN && array[i] != undefined) {
+      if (array[i] != false && array[i] != 0 && array[i] != null && array[i] != "" && array[i] != NaN && array[i] != undefined) {
         res.push(array[i])
       }
     }
