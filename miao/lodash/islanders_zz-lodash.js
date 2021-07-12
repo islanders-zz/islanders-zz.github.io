@@ -81,6 +81,10 @@ var islanders_zz = function () {
     return res
   }
 
+  function mean(array) {
+    return sum(array) / array.length
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -94,7 +98,8 @@ var islanders_zz = function () {
     subtract: subtract,
     multiply: multiply,
     divide: divide,
-    sum: sum
+    sum: sum,
+    mean: mean
     
   }
 } ()
