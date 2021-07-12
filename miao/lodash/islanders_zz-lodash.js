@@ -8,10 +8,22 @@ var islanders_zz = function () {
       res[i] = new Array(size)
       for (let j = 0; j < size && k < array.length; j++) res[i][j] = array[k++]
     }
+
+    return res
+  }
+
+  function compact(array) {
+    let res = new Array()
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] != "false" && array[i] != "0" && array[i] != "null" && array[i] != "" && array[i] != NaN && array[i] != undefined) {
+        res.push(array[i])
+      }
+    }
     return res
   }
 
   return {
     chunk: chunk,
+    compact: compact
   }
 } ()
