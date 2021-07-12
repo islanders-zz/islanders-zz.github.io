@@ -93,8 +93,8 @@ var islanders_zz = function () {
     add: add,
     subtract: subtract,
     multiply: multiply,
-    divide: divide
-
+    divide: divide,
+    sum: sum
     
   }
 } ()
