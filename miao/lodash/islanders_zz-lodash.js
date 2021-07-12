@@ -44,11 +44,19 @@ var islanders_zz = function () {
     if (!array.length) return undefined
     return array[0]
   }
+
   function reverse(array) {
     let res = new Array()
     if (!array.length) return res
     for (let i = 0; i < array.length; i++) res.unshift(array[i])
     return res
+  }
+
+  function fill(array, value, start = 0, end = array.length) {
+    for (let i = start; i < end; i++) {
+      array[i] = value
+    }
+    return array
   }
 
   return {
@@ -58,6 +66,7 @@ var islanders_zz = function () {
     dropRight: dropRight,
     last: last,
     reverse: reverse,
-    head: head
+    head: head,
+    fill: fill
   }
 } ()
