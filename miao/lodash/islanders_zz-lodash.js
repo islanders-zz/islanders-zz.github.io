@@ -91,6 +91,10 @@ var islanders_zz = function () {
     head: head,
     fill: fill,
     add: add,
+    subtract: subtract,
+    multiply: multiply,
     divide: divide
+
+    
   }
 } ()
