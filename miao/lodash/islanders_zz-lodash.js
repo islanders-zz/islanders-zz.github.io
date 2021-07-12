@@ -59,6 +59,28 @@ var islanders_zz = function () {
     return array
   }
 
+  function add(augend, addend) {
+    return augend + addend
+  }
+
+  function subtract(minuend, subtrahend) {
+    return minuend - subtrahend
+  }
+
+  function multiply(multiplier, multiplicand) {
+    return multiplier * multiplicand
+  }
+
+  function divide(dividend, divisor) {
+    return dividend / divisor
+  }
+
+  function sum(array) {
+    let res = 0
+    for (let i = 0; i < array.length; i++) res += array[i]
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -67,6 +89,8 @@ var islanders_zz = function () {
     last: last,
     reverse: reverse,
     head: head,
-    fill: fill
+    fill: fill,
+    add: add,
+    divide: divide
   }
 } ()
