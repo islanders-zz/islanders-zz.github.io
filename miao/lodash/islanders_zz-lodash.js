@@ -22,10 +22,9 @@ var islanders_zz = function () {
   }
 
   function drop(array, n = 1) {
-    let len = array.length
     let res = new Array()
-    if (n >= length) return res
-    for (let i = 1; i <= n; i++) res.pop()
+    if (n >= array.length) return res
+    for (let i = 0; i < array.length - n; i++) res.push(array[i])
     return res
   }
   
