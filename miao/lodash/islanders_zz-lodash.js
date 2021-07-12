@@ -12,6 +12,6 @@ var islanders_zz = function () {
   }
 
   return {
-    chunk: chunk
+    chunk: chunk,
   }
 } ()
