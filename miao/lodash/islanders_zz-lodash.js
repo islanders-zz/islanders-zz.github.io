@@ -40,11 +40,19 @@ var islanders_zz = function () {
     return array[array.length - 1]
   }
 
+  function reverse(array) {
+    let res = new Array()
+    if (!array.length) return res
+    for (let i = 0; i < array.length; i++) res.unshift(array[i])
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
     drop: drop,
     dropRight: dropRight,
-    last: last
+    last: last,
+    reverse: reverse
   }
 } ()
