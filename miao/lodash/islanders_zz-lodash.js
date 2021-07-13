@@ -85,6 +85,24 @@ var islanders_zz = function () {
     return sum(array) / array.length
   }
 
+  function max(array) {
+    if (!array.length) return undefined
+    let res = array[0]
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > res) res = array[i]
+    }
+    return res
+  }
+
+  function min(array) {
+    if (!array.length) return undefined
+    let res = array[0]
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] < res) res = array[i]
+    }
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -99,7 +117,8 @@ var islanders_zz = function () {
     multiply: multiply,
     divide: divide,
     sum: sum,
-    mean: mean
-    
+    mean: mean,
+    max: max,
+    min: min
   }
 } ()
