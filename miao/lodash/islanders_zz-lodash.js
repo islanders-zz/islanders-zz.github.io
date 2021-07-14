@@ -154,7 +154,14 @@ var islanders_zz = function () {
   function take(array, n = 1) {
     let res = new Array()
     if (!array.length) return res
-    for (let i = 0; i < i; i++) res.push(array[i])
+    for (let i = 0; i < n; i++) res.push(array[i])
+    return res
+  }
+
+  function takeRight(array, n = 1) {
+    let res = new Array()
+    if (!array.length) return res
+    for (let i = 1; i <= n; i++) res.unshift(array[array.length - i])
     return res
   }
 
@@ -181,7 +188,8 @@ var islanders_zz = function () {
     initial: initial,
     nth: nth,
     tail: tail,
-    take: take
+    take: take,
+    takeRight: takeRight
   }
 
 } ()
