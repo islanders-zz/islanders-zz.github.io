@@ -137,6 +137,13 @@ var islanders_zz = function () {
     return res
   }
 
+  function nth(array, n = 0) {
+    let res
+    if (n >= 0) res = array[n]
+    else res = array[array.length + n]
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -157,7 +164,8 @@ var islanders_zz = function () {
     fill: fill,
     indexOf: indexOf,
     lastIndexOf: lastIndexOf,
-    initial: initial
+    initial: initial,
+    nth: nth
   }
 
 } ()
