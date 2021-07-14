@@ -108,6 +108,17 @@ var islanders_zz = function () {
     return array
   }
 
+  function indexOf(array, value, fromIndex = 0) {
+    let res = -1
+    for (let i = fromIndex; i < array.length; i++) {
+      if (res[i] === value) {
+        res = i
+        break
+      }
+    }
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -125,6 +136,8 @@ var islanders_zz = function () {
     mean: mean,
     max: max,
     min: min,
-    fill: fill
+    fill: fill,
+    indexOf: indexOf
   }
+
 } ()
