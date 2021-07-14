@@ -151,6 +151,13 @@ var islanders_zz = function () {
     return res
   }
 
+  function take(array, n = 1) {
+    let res = new Array()
+    if (!array.length) return res
+    for (let i = 0; i < i; i++) res.push(array[i])
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -173,7 +180,8 @@ var islanders_zz = function () {
     lastIndexOf: lastIndexOf,
     initial: initial,
     nth: nth,
-    tail: tail
+    tail: tail,
+    take: take
   }
 
 } ()
