@@ -180,7 +180,7 @@ var islanders_zz = function () {
       if (array[mid] >= value) r = mid
       else l = mid + 1
     }
-    return l - 1
+    return l
   }
 
   return {
