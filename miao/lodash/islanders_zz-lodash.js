@@ -119,6 +119,17 @@ var islanders_zz = function () {
     return res
   }
 
+  function lastIndexOf(array, value, fromIndex = array.length - 1) {
+    let res = -1
+    for (let i = fromIndex; i >= 0; i--) {
+      if (arr[i] === value) {
+        res = i
+        break
+      }
+    }
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -137,7 +148,8 @@ var islanders_zz = function () {
     max: max,
     min: min,
     fill: fill,
-    indexOf: indexOf
+    indexOf: indexOf,
+    lastIndexOf: lastIndexOf
   }
 
 } ()
