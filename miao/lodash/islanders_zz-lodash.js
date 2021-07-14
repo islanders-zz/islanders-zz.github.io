@@ -153,15 +153,23 @@ var islanders_zz = function () {
 
   function take(array, n = 1) {
     let res = new Array()
-    if (!array.length) return res
-    for (let i = 0; i < n; i++) res.push(array[i])
+    if (n > array.length) {
+      for (let i = 0; i < array.length; i++) res.push(array[i])
+    }
+    else {
+      for (let i = 0; i < n; i++) res.push(array[i])
+    }
     return res
   }
 
   function takeRight(array, n = 1) {
     let res = new Array()
-    if (!array.length) return res
-    for (let i = 1; i <= n; i++) res.unshift(array[array.length - i])
+    if (n > array.length) {
+      for (let i = 0; i < array.length; i++) res.push(array[i])
+    }
+    else {
+      for (let i = 1; i <= n; i++) res.unshift(array[array.length - i])
+    }
     return res
   }
 
