@@ -173,6 +173,16 @@ var islanders_zz = function () {
     return res
   }
 
+  function sortedIndex(array, value) {
+    let l = 0, r = array.length - 1
+    while (l < r) {
+      let mid = l + r >> 1
+      if (array[mid] >= value) r = mid
+      else l = mid + 1
+    }
+    return l - 1
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -197,7 +207,8 @@ var islanders_zz = function () {
     nth: nth,
     tail: tail,
     take: take,
-    takeRight: takeRight
+    takeRight: takeRight,
+    sortedIndex: sortedIndex
   }
 
 } ()
