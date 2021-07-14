@@ -122,7 +122,7 @@ var islanders_zz = function () {
   function lastIndexOf(array, value, fromIndex = array.length - 1) {
     let res = -1
     for (let i = fromIndex; i >= 0; i--) {
-      if (arr[i] === value) {
+      if (array[i] === value) {
         res = i
         break
       }
