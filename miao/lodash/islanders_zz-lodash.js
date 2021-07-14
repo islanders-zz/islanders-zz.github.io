@@ -103,6 +103,11 @@ var islanders_zz = function () {
     return res
   }
 
+  function fill(array, value, start = 0, end = array.length) {
+    for (let i = start; i < end; i++) array[i] = value
+    return array
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -119,6 +124,7 @@ var islanders_zz = function () {
     sum: sum,
     mean: mean,
     max: max,
-    min: min
+    min: min,
+    fill: fill
   }
 } ()
