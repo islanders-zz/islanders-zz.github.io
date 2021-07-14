@@ -111,7 +111,7 @@ var islanders_zz = function () {
   function indexOf(array, value, fromIndex = 0) {
     let res = -1
     for (let i = fromIndex; i < array.length; i++) {
-      if (res[i] === value) {
+      if (array[i] === value) {
         res = i
         break
       }
