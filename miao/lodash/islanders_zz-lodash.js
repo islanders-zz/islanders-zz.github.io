@@ -192,6 +192,12 @@ var islanders_zz = function () {
     return res
   }
 
+  function slice(array, start = 0, end = array.length) {
+    let res = []
+    for (let i = start; i < end; i++) res.push(array[i])
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -219,6 +225,7 @@ var islanders_zz = function () {
     takeRight: takeRight,
     sortedIndex: sortedIndex,
     join: join,
+    slice: slice,
   }
 
 }()
