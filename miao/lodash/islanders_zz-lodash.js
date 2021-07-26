@@ -1,5 +1,5 @@
 var islanders_zz = function () {
-  
+
   function chunk(array, size = 1) {
     let len = Math.ceil(array.length / size)
     let res = new Array()
@@ -34,7 +34,7 @@ var islanders_zz = function () {
     for (let i = 0; i < array.length - n; i++) res.push(array[i])
     return res
   }
-  
+
   function last(array) {
     if (!array.length) return undefined
     return array[array.length - 1]
@@ -183,6 +183,15 @@ var islanders_zz = function () {
     return l
   }
 
+  function join(array, separator = `,`) {
+    let res = String("")
+    for (let i = 0; i < array.length - 1; i++) {
+      res = res + String(array[i]) + separator
+    }
+    res += array[array.length - 1]
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -208,7 +217,8 @@ var islanders_zz = function () {
     tail: tail,
     take: take,
     takeRight: takeRight,
-    sortedIndex: sortedIndex
+    sortedIndex: sortedIndex,
+    join: join,
   }
 
-} ()
+}()
