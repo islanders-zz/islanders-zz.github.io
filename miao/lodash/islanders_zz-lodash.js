@@ -229,7 +229,7 @@ var islanders_zz = function () {
 
   function lowerFirst(string = '') {
     if (string.length == 0) return string
-    let res = string[0].toUpperCase() + string.slice(1)
+    let res = string[0].toLowerCase() + string.slice(1)
     return res
   }
 
