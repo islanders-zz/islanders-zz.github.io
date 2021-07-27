@@ -198,6 +198,21 @@ var islanders_zz = function () {
     return res
   }
 
+  function difference(array, values) {
+    let res = []
+    for (let i = 0; i < array.length; i++) {
+      let flag = true
+      for (let j = 0; j < value.length; j++) {
+        if (array[i] == value[j]) {
+          flag = false
+          break
+        }
+      }
+      if (flag) res.push(array[i])
+    }
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -226,6 +241,7 @@ var islanders_zz = function () {
     sortedIndex: sortedIndex,
     join: join,
     slice: slice,
+    difference: difference,
   }
 
 }()
