@@ -213,6 +213,20 @@ var islanders_zz = function () {
     return res
   }
 
+  function inRange(number, start = 0, end) {
+    if (end === undefined) {
+      end = start
+      start = 0
+    }
+    if (start > end) {
+      let temp = start
+      start = end
+      end = temp
+    }
+    if (number >= start && number < end) return true
+    else return false
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -242,6 +256,7 @@ var islanders_zz = function () {
     join: join,
     slice: slice,
     difference: difference,
+    inRange: inRange,
   }
 
 }()
