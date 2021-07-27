@@ -233,7 +233,6 @@ var islanders_zz = function () {
     return res
   }
 
-  _.capitalize([string = ''])#
   function capitalize(string = '') {
     if (string.length) return string
     let res = string[0].toUpperCase() + string.slice(1).toLowerCase()
@@ -271,6 +270,7 @@ var islanders_zz = function () {
     difference: difference,
     inRange: inRange,
     lowerFirst: lowerFirst,
+    capitalize: capitalize,
   }
 
 }()
