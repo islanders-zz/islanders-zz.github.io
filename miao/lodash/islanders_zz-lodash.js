@@ -227,6 +227,19 @@ var islanders_zz = function () {
     else return false
   }
 
+  function lowerFirst(string = '') {
+    if (string.length) return string
+    let res = string[0].toUpperCase() + string.slice(1)
+    return res
+  }
+
+  _.capitalize([string = ''])#
+  function capitalize(string = '') {
+    if (string.length) return string
+    let res = string[0].toUpperCase() + string.slice(1).toLowerCase()
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -257,6 +270,7 @@ var islanders_zz = function () {
     slice: slice,
     difference: difference,
     inRange: inRange,
+    lowerFirst: lowerFirst,
   }
 
 }()
