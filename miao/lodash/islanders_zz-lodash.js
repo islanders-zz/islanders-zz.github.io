@@ -202,8 +202,8 @@ var islanders_zz = function () {
     let res = []
     for (let i = 0; i < array.length; i++) {
       let flag = true
-      for (let j = 0; j < value.length; j++) {
-        if (array[i] == value[j]) {
+      for (let j = 0; j < values.length; j++) {
+        if (array[i] == values[j]) {
           flag = false
           break
         }
