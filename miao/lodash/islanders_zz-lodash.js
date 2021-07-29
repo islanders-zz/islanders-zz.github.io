@@ -250,23 +250,17 @@ var islanders_zz = function () {
   }
 
   function isUndefined(value) {
-    if (value == undefined) return true
+    if (value === undefined) return true
     else return false
   }
 
   function uniq(array) {
-    let obj = {}
+    let temp = new Set()
     for (let i = 0; i < array.length; i++) {
-      let temp = array[i]
-      if (temp in obj) {
-        obj[temp]++
-      }
-      else {
-        obj[temp] = 1
-      }
+      temp.add(array[i])
     }
     let res = []
-    for (let key in obj) {
+    for (let key of temp) {
       res.push(key)
     }
     return res
