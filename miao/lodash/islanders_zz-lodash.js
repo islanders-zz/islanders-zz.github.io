@@ -283,7 +283,7 @@ var islanders_zz = function () {
     }
     else {
       for (let key in collection) {
-        res.push(iteratee(collection[key], i, collection))
+        res.push(iteratee(collection[key], key, collection))
       }
     }
     return res
