@@ -254,6 +254,24 @@ var islanders_zz = function () {
     else return false
   }
 
+  function uniq(array) {
+    let obj = {}
+    for (let i = 0; i < array.length; i++) {
+      let temp = array[i]
+      if (temp in obj) {
+        obj[temp]++
+      }
+      else {
+        obj[temp] = 1
+      }
+    }
+    let res = []
+    for (let key in obj) {
+      res.push(key)
+    }
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -289,6 +307,7 @@ var islanders_zz = function () {
     isNil: isNil,
     isNull: isNull,
     isUndefined: isUndefined,
+    uniq: uniq,
   }
 
 }()
