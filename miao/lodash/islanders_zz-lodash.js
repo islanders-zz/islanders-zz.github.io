@@ -249,6 +249,11 @@ var islanders_zz = function () {
     else return false
   }
 
+  function isUndefined(value) {
+    if (value == undefined) return true
+    else return false
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -283,6 +288,7 @@ var islanders_zz = function () {
     capitalize: capitalize,
     isNil: isNil,
     isNull: isNull,
+    isUndefined: isUndefined,
   }
 
 }()
