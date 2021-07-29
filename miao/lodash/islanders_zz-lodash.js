@@ -239,6 +239,16 @@ var islanders_zz = function () {
     return res
   }
 
+  function isNil(value) {
+    if (value == null || undefined) return true
+    else return false
+  }
+
+  function isNull(value) {
+    if (value === null) return true
+    else return false
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -271,6 +281,8 @@ var islanders_zz = function () {
     inRange: inRange,
     lowerFirst: lowerFirst,
     capitalize: capitalize,
+    isNil: isNil,
+    isNull: isNull,
   }
 
 }()
