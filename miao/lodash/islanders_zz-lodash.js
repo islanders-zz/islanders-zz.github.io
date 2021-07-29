@@ -276,8 +276,15 @@ var islanders_zz = function () {
 
   function map(collection, iteratee) {
     let res = []
-    for (let i = 0; i < collection.length; i++) {
-      res.push(iteratee(collection[i], i, collection))
+    if (Array.isArray(collection)) {
+      for (let i = 0; i < collection.length; i++) {
+        res.push(iteratee(collection[i], i, collection))
+      }
+    }
+    else {
+      for (let key in collection) {
+        res.push(iteratee(collection[i], i, collection))
+      }
     }
     return res
   }
