@@ -268,8 +268,10 @@ var islanders_zz = function () {
 
   function forEach(collection, iteratee) {
     for (let i = 0; i < collection.length; i++) {
+      if (iteratee(collection[i], i, collection) === false) break
       iteratee(collection[i], i, collection)
     }
+    return collection
   }
 
   function map(collection, iteratee) {
