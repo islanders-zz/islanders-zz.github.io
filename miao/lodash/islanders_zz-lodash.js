@@ -266,6 +266,13 @@ var islanders_zz = function () {
     return res
   }
 
+  function forEach(collection, iteratee) {
+    for (let i = 0; i < collection.length; i++) {
+      if (iteratee(collection[i], i, collection) === false) break
+      iteratee(collection[i], i, collection)
+    }
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -302,6 +309,7 @@ var islanders_zz = function () {
     isNull: isNull,
     isUndefined: isUndefined,
     uniq: uniq,
+    forEach: forEach,
   }
 
 }()
