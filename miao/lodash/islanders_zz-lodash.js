@@ -289,6 +289,13 @@ var islanders_zz = function () {
     return res
   }
 
+  function findIndex(array, predicate, fromIndex = 0) {
+    for (let i = fromIndex; i < array.length; i++) {
+      if (predicate(array[i]))  return i
+    }
+    return -1
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -327,6 +334,7 @@ var islanders_zz = function () {
     uniq: uniq,
     forEach: forEach,
     map: map,
+    findIndex: findIndex,
   }
 
 }()
