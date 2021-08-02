@@ -350,6 +350,16 @@ var islanders_zz = function () {
     return array
   }
 
+  function fromPairs(pairs) {
+    let res = {}
+    for (let i = 0; i < pairs.length; i++) {
+      let key = String(pairs[i][0])
+      let val = pairs[i][1]
+      res[key] = val
+    }
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -394,6 +404,7 @@ var islanders_zz = function () {
     sortedLastIndexOf: sortedLastIndexOf,
     size: size,
     pullAll: pullAll,
+    fromPairs: fromPairs,
   }
 
 }()
