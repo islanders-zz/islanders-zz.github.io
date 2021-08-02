@@ -331,6 +331,25 @@ var islanders_zz = function () {
     return l 
   }
     
+  function size(collection) {
+    if (Array.isArray(collection)) return collection.length
+    if (typeof collection == `string`) return collection.length
+    if (typeof collection == "object") {
+      let res = 0
+      for (let key in collection) res++
+      return res
+    }
+  }
+
+  function pullAll(array, values) {
+    let len = array.length
+    for (let i = 1; i <= len; i++) {
+      let item = array.shift()
+      if (!values.includes(item)) array.push(item)
+    }
+    return array
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -373,6 +392,8 @@ var islanders_zz = function () {
     sortedIndexOf: sortedIndexOf,
     sortedLastIndex: sortedLastIndex,
     sortedLastIndexOf: sortedLastIndexOf,
+    size: size,
+    pullAll: pullAll,
   }
 
 }()
