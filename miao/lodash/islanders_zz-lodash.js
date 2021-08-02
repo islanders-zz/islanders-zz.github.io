@@ -307,6 +307,17 @@ var islanders_zz = function () {
     else return -1
   }
 
+  function sortedLastIndexOf(array, value) {
+    let l = 0, r = array.length - 1
+    while (l < r) {
+      let mid = l + r + 1>> 1
+      if (array[mid] <= value) l = mid
+      else r = mid - 1 
+    }
+    if (array[l] == value) return l
+    else return -1 
+  }
+
 
   function sortedLastIndex(array, value) {
     if (value >= array[array.length - 1]) return array.length
@@ -361,6 +372,7 @@ var islanders_zz = function () {
     findIndex: findIndex,
     sortedIndexOf: sortedIndexOf,
     sortedLastIndex: sortedLastIndex,
+    sortedLastIndexOf: sortedLastIndexOf,
   }
 
 }()
