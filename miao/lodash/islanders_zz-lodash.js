@@ -296,6 +296,17 @@ var islanders_zz = function () {
     return -1
   }
 
+  function sortedIndexOf(array, value) {
+    let l = 0, r = array.length - 1
+    while (l < r) {
+      let mid = l + r >> 1
+      if (array[mid] >= value) r = mid
+      else l =  mid + 1
+    }
+    if (array[l] == value) return l
+    else return -1
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -335,6 +346,7 @@ var islanders_zz = function () {
     forEach: forEach,
     map: map,
     findIndex: findIndex,
+    sortedIndexOf: sortedIndexOf,
   }
 
 }()
