@@ -307,6 +307,19 @@ var islanders_zz = function () {
     else return -1
   }
 
+
+  function sortedLastIndex(array, value) {
+    if (value >= array[array.length - 1]) return array.length
+    if (value < array[0]) return 0
+    let l = 0, r = array.length - 1
+    while (l < r) {
+      let mid = l + r >> 1
+      if (array[mid] > value) r = mid
+      else l = mid + 1
+    }
+    return l 
+  }
+    
   return {
     chunk: chunk,
     compact: compact,
@@ -347,6 +360,7 @@ var islanders_zz = function () {
     map: map,
     findIndex: findIndex,
     sortedIndexOf: sortedIndexOf,
+    sortedLastIndex: sortedLastIndex,
   }
 
 }()
