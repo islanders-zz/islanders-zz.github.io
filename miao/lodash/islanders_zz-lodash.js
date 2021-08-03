@@ -388,6 +388,18 @@ var islanders_zz = function () {
     return number
   }
 
+  function sortedUniq(array) {
+    let res = []
+    if (array.length == 0) return res
+    for (let i = 0; i < array.length; i++) {
+      res.push(array[i])
+      let j = i
+      while (array[j] == array[i]) j++
+      i = j - 1
+    }
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -439,6 +451,7 @@ var islanders_zz = function () {
     gte: gte,
     repeat: repeat,
     clamp: clamp,
+    sortedUniq: sortedUniq,
   }
 
 }()
