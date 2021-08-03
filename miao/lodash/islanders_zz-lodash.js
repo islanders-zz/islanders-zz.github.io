@@ -404,6 +404,28 @@ var islanders_zz = function () {
     return Array.isArray(value)
   }
 
+
+  function includes(collection, value, fromIndex = 0) {
+
+    if (Array.isArray(collection)) {
+      for (let i = fromIndex; i < collection.length; i++) {
+        if (collection[i] == value) return true
+      }
+      return false
+    }
+
+    if (typeof collection == "object") {
+      for (let key in collection) {
+        if (collection[key] == value) return true
+      }
+      return false
+    }
+
+    if (typeof collection == "string") {
+      
+    }
+  }
+
   return {
     chunk: chunk,
     compact: compact,
