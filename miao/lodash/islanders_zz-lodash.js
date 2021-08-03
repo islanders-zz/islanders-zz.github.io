@@ -360,6 +360,14 @@ var islanders_zz = function () {
     return res
   }
 
+  function lt(value, other) {
+    return value < other ? true : false
+  }
+
+  function lte(value, other) {
+    return value <= other ? true : false
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -405,6 +413,8 @@ var islanders_zz = function () {
     size: size,
     pullAll: pullAll,
     fromPairs: fromPairs,
+    lt: lt,
+    lte: lte,
   }
 
 }()
