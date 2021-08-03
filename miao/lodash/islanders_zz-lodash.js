@@ -376,6 +376,12 @@ var islanders_zz = function () {
     return value >= other ? true : false
   }
 
+  function repeat(string = ``, n = 1) {
+    let res = ""
+    for (let i = 1; i <= n; i++) res += string
+    return res  
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -425,6 +431,7 @@ var islanders_zz = function () {
     lte: lte,
     gt: gt,
     gte: gte,
+    repeat: repeat,
   }
 
 }()
