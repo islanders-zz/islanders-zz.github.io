@@ -368,6 +368,14 @@ var islanders_zz = function () {
     return value <= other ? true : false
   }
 
+  function gt(value, other) {
+    return value > other ? true : false 
+  }
+
+  function gte(value, other) {
+    return value >= other ? true : false
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -415,6 +423,8 @@ var islanders_zz = function () {
     fromPairs: fromPairs,
     lt: lt,
     lte: lte,
+    gt: gt,
+    gte: gte,
   }
 
 }()
