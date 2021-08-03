@@ -400,6 +400,10 @@ var islanders_zz = function () {
     return res
   }
 
+  function isArray(value) {
+    return Array.isArray(value)
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -452,6 +456,7 @@ var islanders_zz = function () {
     repeat: repeat,
     clamp: clamp,
     sortedUniq: sortedUniq,
+    isArray: isArray,
   }
 
 }()
