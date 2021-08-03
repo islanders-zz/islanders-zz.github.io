@@ -422,7 +422,7 @@ var islanders_zz = function () {
     }
 
     if (typeof collection == "string") {
-      
+      return collection.includes(value)
     }
   }
 
@@ -479,6 +479,7 @@ var islanders_zz = function () {
     clamp: clamp,
     sortedUniq: sortedUniq,
     isArray: isArray,
+    includes: includes,
   }
 
 }()
