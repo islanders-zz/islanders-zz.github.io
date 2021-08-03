@@ -382,6 +382,12 @@ var islanders_zz = function () {
     return res  
   }
 
+  function clamp(number, lower, upper) {
+    if (number > upper) return upper
+    if (number < lower) return lower
+    return number
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -432,6 +438,7 @@ var islanders_zz = function () {
     gt: gt,
     gte: gte,
     repeat: repeat,
+    clamp: clamp,
   }
 
 }()
