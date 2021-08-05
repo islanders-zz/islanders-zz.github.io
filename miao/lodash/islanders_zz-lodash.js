@@ -437,6 +437,14 @@ var islanders_zz = function () {
     })
     return res
   }
+
+  function castArray(value) {
+    if (Array.isArray(value)) return value
+    if (arguments.length == 0) return []
+    let res = []
+    res.push(value)
+    return res
+  }
     
   return {
     chunk: chunk,
@@ -494,6 +502,7 @@ var islanders_zz = function () {
     includes: includes,
     union: union,
     without: without,
+    castArray: castArray,
   }
 
 }()
