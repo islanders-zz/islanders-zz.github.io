@@ -198,17 +198,11 @@ var islanders_zz = function () {
     return res
   }
 
-  function difference(array, values) {
+  function difference(array, ...values) {
     let res = []
+    let temp = [].concat(...values)
     for (let i = 0; i < array.length; i++) {
-      let flag = true
-      for (let j = 0; j < values.length; j++) {
-        if (array[i] == values[j]) {
-          flag = false
-          break
-        }
-      }
-      if (flag) res.push(array[i])
+      if (!temp.includes(array[i])) res.push(array[i])
     }
     return res
   }
@@ -422,7 +416,7 @@ var islanders_zz = function () {
     }
 
     if (typeof collection == "string") {
-      return collection.includes(value)
+      return collection.includes(value)   // 要利用KMP算法
     }
   }
 
