@@ -419,7 +419,16 @@ var islanders_zz = function () {
       return collection.includes(value)   // 要利用KMP算法
     }
   }
-
+  
+  function union(...arrays) {
+    let temp = [].concat(...arrays)
+    let res = []
+    for (let i = 0; i < temp.length; i++) {
+      if (!res.includes(temp[i])) res.push(temp[i])
+    }
+    return res
+  }
+    
   return {
     chunk: chunk,
     compact: compact,
@@ -474,6 +483,7 @@ var islanders_zz = function () {
     sortedUniq: sortedUniq,
     isArray: isArray,
     includes: includes,
+    union: union,
   }
 
 }()
