@@ -509,7 +509,8 @@ var islanders_zz = function () {
     union: union,
     without: without,
     castArray: castArray,
-    isBoolean: isBoolean
+    isBoolean: isBoolean,
+
   }
 
 }()
