@@ -428,6 +428,15 @@ var islanders_zz = function () {
     }
     return res
   }
+
+  function without(array, ...values) {
+    let temp = [].concat(...values)
+    let res = []
+    array.forEach(item => {
+      if (!temp.includes(item)) res.push(item)
+    })
+    return res
+  }
     
   return {
     chunk: chunk,
@@ -484,6 +493,7 @@ var islanders_zz = function () {
     isArray: isArray,
     includes: includes,
     union: union,
+    without: without,
   }
 
 }()
