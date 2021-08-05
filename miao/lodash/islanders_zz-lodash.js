@@ -445,6 +445,12 @@ var islanders_zz = function () {
     res.push(value)
     return res
   }
+
+  _.isBoolean(value)
+  function isBoolean(value) {
+    if (value.__proto__ == Boolean.prototype) return true
+    else return false
+  }
     
   return {
     chunk: chunk,
@@ -503,6 +509,7 @@ var islanders_zz = function () {
     union: union,
     without: without,
     castArray: castArray,
+    isBoolean: isBoolean
   }
 
 }()
