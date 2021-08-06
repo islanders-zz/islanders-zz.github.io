@@ -498,6 +498,19 @@ var islanders_zz = function () {
     }
   }
 
+  function isDate(value) {
+    if (value.__proto__ == Date.prototype) return true
+    else return false
+  }
+
+  function keys(object) {
+    let res = []
+    for (let key in object) {
+      if (object.hasOwnProperty(key)) res.push(key)
+    }
+    return res
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -561,6 +574,8 @@ var islanders_zz = function () {
     isString: isString,
     pull: pull,
     reduce: reduce,
+    isDate: isDate,
+    keys: keys,
   }
 
 }()
