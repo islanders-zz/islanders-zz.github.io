@@ -527,7 +527,7 @@ var islanders_zz = function () {
 
   function isMap(value) {
     if (value.__proto__ === Map.prototype) return true
-    else return true
+    else return false
   }
 
   return {
