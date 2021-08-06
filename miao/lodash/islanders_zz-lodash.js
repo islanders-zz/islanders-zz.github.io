@@ -536,7 +536,7 @@ var islanders_zz = function () {
   }
 
   function isFunction(value) {
-    if (value.__proto__ === Function.prototype) return true
+    if (typeof value == "function") return true
     else return false
   }
 
