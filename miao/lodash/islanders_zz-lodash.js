@@ -550,6 +550,7 @@ var islanders_zz = function () {
     else return false
   }
 
+  
   return {
     chunk: chunk,
     compact: compact,
