@@ -462,6 +462,11 @@ var islanders_zz = function () {
     else return false
   }
 
+  function isString(value) {
+    if (typeof value == "string") return true
+    else return false
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -522,6 +527,7 @@ var islanders_zz = function () {
     isBoolean: isBoolean,
     isNumber: isNumber,
     isObject: isObject,
+    isString: isString,
   }
 
 }()
