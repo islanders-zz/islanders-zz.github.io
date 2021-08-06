@@ -478,11 +478,19 @@ var islanders_zz = function () {
   }
 
   function reduce(collection, iteratee, accumulator) {
-    for (let i = 0; i < collection.length; i++) {
-      item = collection[i]
-      accumulator = iteratee(accumulator, item)
+    if (Array.isArray(collection)) {
+      let i = 0
+      if (accumulator == undefined) {
+        accumulator = collection[0]
+        i = 1
+      }
+      for (; i < collection.length; i++) {
+        item = collection[i]
+        accumulator = iteratee(accumulator, item)
+      }
+      return accumulator
     }
-    return accumulator
+
   }
 
   return {
