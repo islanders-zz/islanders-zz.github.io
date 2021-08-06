@@ -477,6 +477,14 @@ var islanders_zz = function () {
     return array
   }
 
+  function reduce(collection, iteratee, accumulator) {
+    for (let i = 0; i < collection.length; i++) {
+      item = collection[i]
+      accumulator = iteratee(accumulator, item)
+    }
+    return accumulator
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -539,6 +547,7 @@ var islanders_zz = function () {
     isObject: isObject,
     isString: isString,
     pull: pull,
+    reduce: reduce,
   }
 
 }()
