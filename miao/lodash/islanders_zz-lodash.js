@@ -478,7 +478,7 @@ var islanders_zz = function () {
   }
 
   function reduce(collection, iteratee, accumulator) {
-    if (Array.isArray(collection)) {
+    if (Array.isArray(collection)) {  //处理数组
       let i = 0
       if (accumulator == undefined) {
         accumulator = collection[0]
