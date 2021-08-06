@@ -458,7 +458,7 @@ var islanders_zz = function () {
   }
   
   function isObject(value) {
-    if (typeof value == "object") return true
+    if (value !== null &&(typeof value == "object" || typeof value == "function")) return true
     else return false
   }
 
