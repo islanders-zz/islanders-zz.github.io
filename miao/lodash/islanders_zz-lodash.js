@@ -546,7 +546,7 @@ var islanders_zz = function () {
   }
 
   function isWeakSet(value) {
-    if (value.__proto__ === value.prototype) return true
+    if (value.__proto__ === WeakSet.prototype) return true
     else return false
   }
 
