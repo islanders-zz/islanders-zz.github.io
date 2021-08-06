@@ -498,6 +498,15 @@ var islanders_zz = function () {
     }
   }
 
+  function reduceRight(collection, iteratee, accumulator) {
+    if (Array.isArray(collection)) {
+      for (let i = collection.length - 1; i >= 0; i--) {
+        accumulator = iteratee(accumulator, collection[i])
+      }
+      return accumulator
+    }
+  }
+
   function isDate(value) {
     if (value.__proto__ == Date.prototype) return true
     else return false
@@ -576,6 +585,7 @@ var islanders_zz = function () {
     reduce: reduce,
     isDate: isDate,
     keys: keys,
+    reduceRight: reduceRight,
   }
 
 }()
