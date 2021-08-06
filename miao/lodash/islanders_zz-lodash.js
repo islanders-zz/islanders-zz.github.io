@@ -467,6 +467,16 @@ var islanders_zz = function () {
     else return false
   }
 
+  function pull(array, ...values) {
+    let temp = [].concat(...values)
+    let len = array.length
+    for (let i = 1; i <= len; i++) {
+      let item = array.shift();
+      if (!temp.includes(item)) array.push(item)
+    }
+    return array
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -528,6 +538,7 @@ var islanders_zz = function () {
     isNumber: isNumber,
     isObject: isObject,
     isString: isString,
+    pull: pull,
   }
 
 }()
