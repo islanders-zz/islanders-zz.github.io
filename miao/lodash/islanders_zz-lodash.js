@@ -520,6 +520,16 @@ var islanders_zz = function () {
     return res
   }
 
+  function isSet(value) {
+    if (value.__proto__ == Set.prototype) return true
+    else return false
+  }
+
+  function isMap(value) {
+    if (value.__proto__ == Map.prototype) return true
+    else return true
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -586,6 +596,8 @@ var islanders_zz = function () {
     isDate: isDate,
     keys: keys,
     reduceRight: reduceRight,
+    isSet: isSet,
+    isMap: isMap,
   }
 
 }()
