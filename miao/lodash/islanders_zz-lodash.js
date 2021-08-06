@@ -451,7 +451,17 @@ var islanders_zz = function () {
     if (value.__proto__ == Boolean.prototype) return true
     else return false
   }
-    
+
+  function isNumber(value) {
+    if (typeof value == "number") return true
+    else return false
+  }
+  
+  function isObject(value) {
+    if (typeof value == "object") return true
+    else return false
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -510,7 +520,8 @@ var islanders_zz = function () {
     without: without,
     castArray: castArray,
     isBoolean: isBoolean,
-
+    isNumber: isNumber,
+    isObject: isObject,
   }
 
 }()
