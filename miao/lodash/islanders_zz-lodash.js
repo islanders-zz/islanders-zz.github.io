@@ -285,7 +285,7 @@ var islanders_zz = function () {
 
   function findIndex(array, predicate, fromIndex = 0) {
     for (let i = fromIndex; i < array.length; i++) {
-      if (predicate(array[i]))  return i
+      if (predicate(array[i])) return i
     }
     return -1
   }
@@ -295,7 +295,7 @@ var islanders_zz = function () {
     while (l < r) {
       let mid = l + r >> 1
       if (array[mid] >= value) r = mid
-      else l =  mid + 1
+      else l = mid + 1
     }
     if (array[l] == value) return l
     else return -1
@@ -304,12 +304,12 @@ var islanders_zz = function () {
   function sortedLastIndexOf(array, value) {
     let l = 0, r = array.length - 1
     while (l < r) {
-      let mid = l + r + 1>> 1
+      let mid = l + r + 1 >> 1
       if (array[mid] <= value) l = mid
-      else r = mid - 1 
+      else r = mid - 1
     }
     if (array[l] == value) return l
-    else return -1 
+    else return -1
   }
 
 
@@ -322,7 +322,7 @@ var islanders_zz = function () {
       if (array[mid] > value) r = mid
       else l = mid + 1
     }
-    return l 
+    return l
   }
     
   function size(collection) {
@@ -363,7 +363,7 @@ var islanders_zz = function () {
   }
 
   function gt(value, other) {
-    return value > other ? true : false 
+    return value > other ? true : false
   }
 
   function gte(value, other) {
@@ -373,7 +373,7 @@ var islanders_zz = function () {
   function repeat(string = ``, n = 1) {
     let res = ""
     for (let i = 1; i <= n; i++) res += string
-    return res  
+    return res
   }
 
   function clamp(number, lower, upper) {
@@ -447,6 +447,7 @@ var islanders_zz = function () {
   }
 
   function isBoolean(value) {
+    if (value === null || value === undefined) return false
     if (value.__proto__ == Boolean.prototype) return true
     else return false
   }
