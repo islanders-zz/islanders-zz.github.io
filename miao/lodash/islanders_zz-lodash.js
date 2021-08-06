@@ -530,6 +530,26 @@ var islanders_zz = function () {
     else return false
   }
 
+  function isArrayBuffer(value) {
+    if (value.__proto__ === ArrayBuffer.prototype) return true
+    else return false
+  }
+
+  function isFunction(value) {
+    if (value.__proto__ === Function.prototype) return true
+    else return false
+  }
+
+  function isWeakMap(value) {
+    if (value.__proto__ === WeakMap.prototype) return true
+    else return false
+  }
+
+  function isWeakSet(value) {
+    if (value.__proto__ === value.prototype) return true
+    else return false
+  }
+
   return {
     chunk: chunk,
     compact: compact,
@@ -598,6 +618,10 @@ var islanders_zz = function () {
     reduceRight: reduceRight,
     isSet: isSet,
     isMap: isMap,
+    isArrayBuffer: isArrayBuffer,
+    isFunction: isFunction,
+    isWeakMap: isWeakMap,
+    isWeakSet: isWeakSet,
   }
 
 }()
