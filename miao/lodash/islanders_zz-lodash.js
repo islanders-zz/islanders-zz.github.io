@@ -490,7 +490,12 @@ var islanders_zz = function () {
       }
       return accumulator
     }
-
+    if (collection.__proto__ == Object.prototype) {   // 处理对象
+      for (let key in collection) {
+        accumulator = iteratee(accumulator, collection[key], key)
+      }
+      return accumulator
+    }
   }
 
   return {
