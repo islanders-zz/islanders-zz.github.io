@@ -137,6 +137,11 @@ var islanders_zz = function () {
     return array.reduce((acc, item, index, array) => acc + item, 0)
   }
 
+  function sumBy(array, predicate) {
+    predicate = iteratee(predicate)
+    return array.reduce((acc, item, index, array) => acc + predicate(item), 0)
+  }
+
   return {
     isEqual: isEqual,
     toPath: toPath,
@@ -154,5 +159,6 @@ var islanders_zz = function () {
     multiply: multiply,
     subtract: subtract,
     sum: sum,
+    sum: sumBy,
   }
 }()
