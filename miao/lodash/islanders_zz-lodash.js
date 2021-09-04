@@ -58,7 +58,7 @@ var islanders_zz = function () {
         else {
           let keysvalue = Object.keys(value)
           let keysother = Object.keys(other)
-          if (keysvalue !== keysother) return false
+          if (keysvalue.length !== keysother.length) return false
         }
         for (let key in value) {
           if (!(key in other)) return false
@@ -94,8 +94,8 @@ var islanders_zz = function () {
   function get(object, path, defaultValue) {
     path = toPath(path)
     for (let i = 0; i < path.length; i++) {
-      if (object == undefined) return defaultValue
-      object = object[path[i]]
+      if (object == undefined || object[path[i]] == undefined) return defaultValue
+      else object = object[path[i]]
     }
     return object
   }
