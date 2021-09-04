@@ -122,8 +122,9 @@ var islanders_zz = function () {
 
   function maxBy(array, predicate) {
     predicate = iteratee(predicate)
-    let temp = array.map(predicate(item))
-    return max(temp)
+    let temp = array.map((item, index, array) => predicate(item))
+    let index = temp.indexOf(max(temp))
+    return array[index]
   }
 
   function min(array) {
@@ -133,8 +134,9 @@ var islanders_zz = function () {
 
   function minBy(array, predicate) {
     predicate = iteratee(predicate)
-    let temp = array.map(predicate(item))
-    return min(temp)
+    let temp = array.map((item, index, array) => predicate(item))
+    let index = temp.indexOf(min(temp))
+    return array[index]
   }
 
   function multiply(multiplier, multiplicand) {
