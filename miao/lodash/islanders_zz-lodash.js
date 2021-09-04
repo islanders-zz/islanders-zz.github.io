@@ -159,6 +159,6 @@ var islanders_zz = function () {
     multiply: multiply,
     subtract: subtract,
     sum: sum,
-    sum: sumBy,
+    sumBy: sumBy,
   }
 }()
