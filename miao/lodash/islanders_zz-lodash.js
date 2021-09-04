@@ -94,7 +94,7 @@ var islanders_zz = function () {
   function get(object, path, defaultValue) {
     path = toPath(path)
     for (let i = 0; i < path.length; i++) {
-      if (object == undefined || object[path[i]] == undefined) return defaultValue
+      if (object[path[i]] == undefined) return defaultValue
       else object = object[path[i]]
     }
     return object
