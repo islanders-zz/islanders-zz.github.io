@@ -94,6 +94,51 @@ var islanders_zz = function () {
     return true
   }
 
+  function gt(value, other) {
+    return value > other ? true : false
+  }
+
+  function gte(value, other) {
+    return value >= other ? true : false
+  }
+
+  function lt(value, other) {
+    return value < other ? true : false
+  }
+
+  function lte(value, other) {
+    return value <= other ? true : false
+  }
+
+  function isArray(value) {
+    return  value instanceof Array
+  }
+
+  function isArrayBuffer(value) {
+    return value instanceof ArrayBuffer
+  }
+
+  function isBoolean(value) {
+    return value instanceof Boolean || value === true || value === false
+  }
+
+  function isDate(value) {
+    return value instanceof Date
+  }
+
+  function isMap(value) {
+    return value instanceof Map
+  }
+
+  function isNil(value) {
+    return value === undefined || value === null
+  }
+
+  function isNull(value) {
+    return value === null
+  }
+
+
   /* Object */
 
   function get(object, path, defaultValue) {
@@ -187,5 +232,16 @@ var islanders_zz = function () {
     mean: mean,
     meanBy: meanBy,
     minBy: minBy,
+    gt: gt,
+    gte: gte,
+    lt: lt,
+    lte: lte,
+    isArray: isArray,
+    isArrayBuffer: isArrayBuffer,
+    isBoolean: isBoolean,
+    isDate: isDate,
+    isNil: isNil,
+    isMap: isMap,
+    isNull: isNull,
   }
 }()
