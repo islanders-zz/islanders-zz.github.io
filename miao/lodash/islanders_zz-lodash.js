@@ -120,6 +120,23 @@ var islanders_zz = function () {
     return Math.max(...array)
   }
 
+  function min(array) {
+    if (array.length <= 0 || Array.isArray(array)) return undefined
+    return Math.min(...array)
+  }
+
+  function multiply(multiplier, multiplicand) {
+    return multiplier * multiplicand
+  }
+
+  function subtract(minuend, subtrahend) {
+    return minuend - subtrahend
+  }
+
+  function sum(array) {
+    return array.reduce((acc, item, index, array) => acc + item, 0)
+  }
+
   return {
     isEqual: isEqual,
     toPath: toPath,
@@ -133,5 +150,9 @@ var islanders_zz = function () {
     add: add,
     divide: divide,
     max: max,
+    min: min,
+    multiply: multiply,
+    subtract: subtract,
+    sum: sum,
   }
 }()
