@@ -1,6 +1,21 @@
 var islanders_zz = function () {
   /* Util */
   
+  function iteratee(predicate) {
+    if (typeof predicate === 'function') {
+      return predicate
+    }
+    if (typeof predicate === 'string') {
+      return property(predicate)
+    }
+    if (Array.isArray(predicate)) {
+      return matchesProperty(...predicate)
+    }
+    if (typeof predicate === 'object') {
+      return matches(predicate)
+    }
+  }
+
   function toPath(value) {
     if (Array.isArray(value)) return value
     else return value.split(/]\[|]\.|\[|\./)
@@ -23,21 +38,11 @@ var islanders_zz = function () {
       isEqual(get(object, path), srcValue)
     }
   }
-
-  function iteratee(predicate) {
-    if (typeof predicate === 'function') {
-      return predicate
-    }
-    if (typeof predicate === 'string') {
-      return property(predicate)
-    }
-    if (Array.isArray(predicate)) {
-      return matchesProperty(...predicate)
-    }
-    if (typeof predicate === 'object') {
-      return matches(predicate)
-    }
+  
+  function identity(value) {
+    return value
   }
+
 
   /* Lang */
 
@@ -100,6 +105,20 @@ var islanders_zz = function () {
     return object
   }
 
+  /* Math */
+
+  function add(augend, addend) {
+    return augend + addend
+  }
+
+  function divide(dividend, divisor) {
+    return dividend / divisor
+  }
+
+  function max(array) {
+    if (array.length <= 0 || !Array.isArray(array)) return undefined
+    return Math.max(...array)
+  }
 
   return {
     isEqual: isEqual,
@@ -110,5 +129,9 @@ var islanders_zz = function () {
     matches: matches,
     matchesProperty: matchesProperty,
     iteratee: iteratee,
+    identity: identity,
+    add: add,
+    divide: divide,
+    max: max,
   }
 }()
