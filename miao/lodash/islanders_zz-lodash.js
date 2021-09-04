@@ -120,6 +120,12 @@ var islanders_zz = function () {
     return Math.max(...array)
   }
 
+  function maxBy(array, predicate) {
+    predicate = iteratee(predicate)
+    let temp = array.map(predicate(item, index, array))
+    return max(...temp)
+  }
+
   function min(array) {
     if (array.length <= 0 || Array.isArray(array)) return undefined
     return Math.min(...array)
@@ -160,5 +166,6 @@ var islanders_zz = function () {
     subtract: subtract,
     sum: sum,
     sumBy: sumBy,
+    maxBy: maxBy,
   }
 }()
