@@ -157,6 +157,7 @@ var islanders_zz = function () {
   }
 
   function nth(array, n = 0) {
+    if (Math.abs(n) >= array.length) return undefined
     while(n < 0) n = n + array.length
     n = n % array.length
     return array[n]
