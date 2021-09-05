@@ -88,6 +88,15 @@ var islanders_zz = function () {
     array.forEach((item, index, array) => { if (!predicate(item) || predicate(item) !== undefined) { res.push(item) } })
     return res
   }
+
+  function dropRightWhile(array, predicate) {
+    predicate = iteratee(predicate)
+    let res = []
+    for (let i = array.length - 1; i >= 0; i--) {
+      if (!predicate(array[i]) || predicate(array[i]) !== undefined) res.unshift(array[i])
+    }
+    return res
+  }
   /* Lang */
 
   function isEqual(value, other) {
@@ -324,5 +333,6 @@ var islanders_zz = function () {
     drop: drop,
     dropRight: dropRight,
     dropWhile: dropWhile,
+    dropRightWhile: dropRightWhile,
   }
 }()
