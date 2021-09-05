@@ -299,6 +299,26 @@ var islanders_zz = function () {
     return object
   }
 
+  /* Collection */
+
+  function map(collection, predicate) {
+    predicate = iteratee(predicate)
+    let res = []
+    for (let key in collection) {
+      res.push(predicate(collection[key]))
+    }
+    return res
+  }
+
+  function filter(collection, predicate) {
+    predicate = iteratee(predicate)
+    let res = []
+    for (let key in collection) {
+      if (predicate(collection[key])) res.push(collection[key])
+    }
+    return res
+  }
+
   /* Math */
 
   function add(augend, addend) {
@@ -418,5 +438,7 @@ var islanders_zz = function () {
     nth: nth,
     reverse: reverse,
     uniq: uniq,
+    map: map,
+    filter: filter,
   }
 }()
