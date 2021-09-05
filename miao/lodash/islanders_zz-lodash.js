@@ -171,6 +171,28 @@ var islanders_zz = function () {
     return Array.from(new Set(array))
   }
 
+  function chunk(array, size = 1) {
+    let len = Math.ceil(array.length / size)
+    let res = new Array(len)
+    let k = 0
+    for (let i = 0; i < len; i++) {
+      res[i] = new Array()
+      for (let j = 0; j < size && k < array.length; j++) {
+        res[i].push(array[k++])
+      }
+    }
+    return res
+  }
+
+  function compact(array) {
+    let temp = new Set([false, null, 0, '', undefined, NaN])
+    let res = []
+    array.forEach((item) => {
+      if (!temp.has(item)) res.push(item)
+    })
+    return res
+  }
+
   /* Lang */
 
   function isEqual(value, other) {
@@ -483,5 +505,7 @@ var islanders_zz = function () {
     size: size,
     every: every,
     some: some,
+    compact: compact,
+    chunk: chunk,
   }
 }()
