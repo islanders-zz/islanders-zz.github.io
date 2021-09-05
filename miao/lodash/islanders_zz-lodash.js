@@ -110,6 +110,19 @@ var islanders_zz = function () {
     return array.slice(0, array.length - 1)
   }
 
+  function tail(array) {
+    return array.slice(1)
+  }
+
+  function take(array, n = 1) {
+    return array.slice(0, n)
+  }
+
+  function takeRight(array, n = 1) {
+    if (n >= array.length) return array.slice()
+    return array.slice(array.length - n, array.length)
+  }
+
   /* Lang */
 
   function isEqual(value, other) {
@@ -348,5 +361,8 @@ var islanders_zz = function () {
     dropWhile: dropWhile,
     dropRightWhile: dropRightWhile,
     initial: initial,
+    tail: tail,
+    take: take,
+    takeRight: takeRight,
   }
 }()
