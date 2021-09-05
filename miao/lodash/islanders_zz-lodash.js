@@ -319,6 +319,13 @@ var islanders_zz = function () {
     }
     return res
   }
+  
+  function forEach(collection, predicate) {
+    predicate = iteratee(predicate)
+    for (let key in collection) {
+      predicate(collection[key], key)
+    }
+  } 
 
   /* Math */
 
@@ -441,5 +448,6 @@ var islanders_zz = function () {
     uniq: uniq,
     map: map,
     filter: filter,
+    forEach: forEach,
   }
 }()
