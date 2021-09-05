@@ -201,6 +201,8 @@ var islanders_zz = function () {
     })
     return res
   }
+  _.concat(array, [values])
+
 
   /* Lang */
 
@@ -516,5 +518,6 @@ var islanders_zz = function () {
     some: some,
     compact: compact,
     chunk: chunk,
+    difference: difference,
   }
 }()
