@@ -66,11 +66,12 @@ var islanders_zz = function () {
     }
     return -1 
   }
-  // _.join(array, [separator = ','])
 
-  // function join(array, separator = ',') {
-  //   let res = array.reduce((acc, item, index, array) => acc + item + ',', '')
-  // }
+  function join(array, separator = ',') {
+    if (array.length <= 0) return ""
+    return array.reduce((acc, item, index, array) => acc + separator + String(item))
+  }
+
   /* Lang */
 
   function isEqual(value, other) {
@@ -303,5 +304,6 @@ var islanders_zz = function () {
     last: last,
     fill: fill,
     indexOf: indexOf,
+    join: join,
   }
 }()
