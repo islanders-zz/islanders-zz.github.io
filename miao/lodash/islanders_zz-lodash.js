@@ -157,7 +157,17 @@ var islanders_zz = function () {
   }
 
   function nth(array, n = 0) {
-    return array[(n + array.length) % array.length]
+    while(n < 0) n = n + array.length
+    n = n % array.length
+    return array[n]
+  }
+
+  function reverse(array) {
+    return array.reverse()
+  }
+
+  function uniq(array) {
+    return Array.from(new Set(array))
   }
 
   /* Lang */
@@ -406,5 +416,7 @@ var islanders_zz = function () {
     fromPairs: fromPairs,
     lastIndexOf: lastIndexOf,
     nth: nth,
+    reverse: reverse,
+    uniq: uniq,
   }
 }()
