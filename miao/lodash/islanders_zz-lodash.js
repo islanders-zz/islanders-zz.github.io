@@ -330,7 +330,32 @@ var islanders_zz = function () {
       predicate(collection[key], key, collection)
     }
     return collection
-  } 
+  }
+  
+  function size(collection) {
+    if (Array.isArray(collection) || typeof collection === 'string') return collection.length
+    else {
+      let cnt = 0
+      for (let key in collection) cnt++
+      return cnt
+    }
+  }
+
+  function some(collection, predicate) {
+    predicate = iteratee(predicate)
+    for (let key in collection) {
+      if (predicate(collection[key], key, collection)) return true
+    }
+    return false
+  }
+
+  function every(collection, predicate) {
+    predicate = iteratee(predicate)
+    for (let key in collection) {
+      if (!predicate(collection[key], key, collection)) return false
+    }
+    return true
+  }
 
   /* Math */
 
@@ -455,5 +480,8 @@ var islanders_zz = function () {
     filter: filter,
     forEach: forEach,
     isFunction: isFunction,
+    size: size,
+    every: every,
+    some: some,
   }
 }()
