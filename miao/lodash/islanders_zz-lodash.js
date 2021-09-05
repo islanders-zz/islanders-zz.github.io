@@ -35,7 +35,7 @@ var islanders_zz = function () {
 
   function matchesProperty(path, srcValue) {
     return function (object) {
-      isEqual(get(object, path), srcValue)
+      return isEqual(get(object, path), srcValue)
     }
   }
   
@@ -72,6 +72,24 @@ var islanders_zz = function () {
     return array.reduce((acc, item, index, array) => acc + separator + String(item))
   }
 
+  function drop(array, n = 1) {
+    if (n <= 0) return array
+    if (n >= array.length) return []
+    return array.slice(n - 1, array.length)
+  }
+
+  function dropRight(array, n = 1) {
+    if (n <= 0) return array
+    if (n >= array.length) return []
+    return array.slice(0, array.length - n)
+  }
+
+  function dropWhile(array, predicate) {
+    predicate = iteratee(predicate)
+    let res = []
+    array.forEach((item, index, array) => { if (!predicate(item) || predicate(item) !== undefined) { res.push(item) } })
+    return res
+  }
   /* Lang */
 
   function isEqual(value, other) {
@@ -305,5 +323,7 @@ var islanders_zz = function () {
     fill: fill,
     indexOf: indexOf,
     join: join,
+    drop: drop,
+    dropRight: dropRight,
   }
 }()
