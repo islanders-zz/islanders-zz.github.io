@@ -83,37 +83,27 @@ var islanders_zz = function () {
   }
 
   function dropWhile(array, predicate) {
-    let res = []
-    if (typeof predicate === 'string') {
-      predicate = iteratee(predicate)
-      array.forEach((item, index, array) => {
-        if (predicate(item) !== undefined) res.push(item)
-      })
+    predicate = iteratee(predicate)
+    let index = 0
+    for (let i = 0; i < array.length; i++) {
+      if (!predicate(array[i])) {
+        index = i
+        break
+      }
     }
-    else {
-      predicate = iteratee(predicate)
-      array.forEach((item, index, array) => {
-        if (!predicate(item)) res.push(item)
-      })
-    }
-    return res
+    return array.slice(index)
   }
 
   function dropRightWhile(array, predicate) {
-    let res = []
-    if (typeof predicate === 'string') {
-      predicate = iteratee(predicate)
-      for (let i = array.length - 1; i >= 0; i--) {
-        if (predicate(array[i]) !== undefined) res.unshift(array[i])
+    predicate = iteratee(predicate)
+    let index = 0
+    for (let i = array.length - 1 ; i >= 0; i--) {
+      if (!predicate(array[i])) {
+        index = i
+        break
       }
     }
-    else {
-      predicate = iteratee(predicate)
-      for (let i = array.length - 1; i >= 0; i--) {
-        if (!predicate(array[i])) res.unshift(array[i])
-      }
-    }
-    return res
+    return array.slice(0, index + 1)
   }
 
   function initial(array) {
