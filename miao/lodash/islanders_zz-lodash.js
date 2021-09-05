@@ -310,7 +310,7 @@ var islanders_zz = function () {
     predicate = iteratee(predicate)
     let res = []
     for (let key in collection) {
-      res.push(predicate(collection[key]))
+      res.push(predicate(collection[key], key, collection))
     }
     return res
   }
@@ -319,7 +319,7 @@ var islanders_zz = function () {
     predicate = iteratee(predicate)
     let res = []
     for (let key in collection) {
-      if (predicate(collection[key])) res.push(collection[key])
+      if (predicate(collection[key], key, collection)) res.push(collection[key])
     }
     return res
   }
@@ -327,8 +327,9 @@ var islanders_zz = function () {
   function forEach(collection, predicate) {
     predicate = iteratee(predicate)
     for (let key in collection) {
-      predicate(collection[key], key)
+      predicate(collection[key], key, collection)
     }
+    return collection
   } 
 
   /* Math */
