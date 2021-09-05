@@ -43,7 +43,34 @@ var islanders_zz = function () {
     return value
   }
 
+  /* Array */
 
+  function head(array) {
+    return array[0]
+  }
+
+  function last(array) {
+    return array[array.length - 1]
+  }
+
+  function fill(array, value, start = 0, end = array.length) {
+    for (let i = start; i < end; i++) {
+      array[i] = value
+    }
+    return array
+  }
+
+  function indexOf(array, value, fromIndex = 0) {
+    for (let i = fromIndex; i < array.length; i++) {
+      if (array[i] === value) return i
+    }
+    return -1 
+  }
+  // _.join(array, [separator = ','])
+
+  // function join(array, separator = ',') {
+  //   let res = array.reduce((acc, item, index, array) => acc + item + ',', '')
+  // }
   /* Lang */
 
   function isEqual(value, other) {
@@ -272,5 +299,9 @@ var islanders_zz = function () {
     isUndefined: isUndefined,
     isWeakMap: isWeakMap,
     isWeakSet: isWeakSet,
+    head: head,
+    last: last,
+    fill: fill,
+    indexOf: indexOf,
   }
 }()
