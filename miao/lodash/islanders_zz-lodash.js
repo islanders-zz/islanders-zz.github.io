@@ -123,6 +123,22 @@ var islanders_zz = function () {
     return array.slice(array.length - n, array.length)
   }
 
+  function findIndex(array, predicate, fromIndex = 0) {
+    predicate = iteratee(predicate)
+    for (let i = fromIndex; i < array.length; i++) {
+      if (predicate(array[i])) return i
+    }
+    return -1 
+  }
+
+  function findLastIndex(array, predicate, fromIndex = array.length - 1) {
+    predicate = iteratee(predicate)
+    for (let i = fromIndex; i >= 0; i--) {
+      if (predicate(array[i])) return i
+    }
+    return -1
+  }
+
   /* Lang */
 
   function isEqual(value, other) {
@@ -364,5 +380,7 @@ var islanders_zz = function () {
     tail: tail,
     take: take,
     takeRight: takeRight,
+    findIndex: findIndex,
+    findLastIndex: findLastIndex,
   }
 }()
