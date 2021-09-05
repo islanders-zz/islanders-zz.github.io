@@ -139,6 +139,16 @@ var islanders_zz = function () {
     return -1
   }
 
+  function fromPairs(pairs) {
+    let res = {}
+    pairs.forEach((item, index, pairs) => {
+      key = item[0]
+      value = item[1]
+      res[key] = value
+    })
+    return res
+  }
+
   /* Lang */
 
   function isEqual(value, other) {
@@ -382,5 +392,6 @@ var islanders_zz = function () {
     takeRight: takeRight,
     findIndex: findIndex,
     findLastIndex: findLastIndex,
+    fromPairs: fromPairs,
   }
 }()
