@@ -310,7 +310,7 @@ var islanders_zz = function () {
     predicate = iteratee(predicate)
     let res = []
     for (let key in collection) {
-      res.push(predicate(collection[key], key, collection))
+      res.push(predicate(collection[key], Number(key), collection))
     }
     return res
   }
