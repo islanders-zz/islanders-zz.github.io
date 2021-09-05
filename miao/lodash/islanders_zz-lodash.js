@@ -289,6 +289,10 @@ var islanders_zz = function () {
     return value instanceof WeakSet
   }
 
+  function isFunction(value) {
+    return value instanceof Function
+  }
+
   /* Object */
 
   function get(object, path, defaultValue) {
@@ -449,5 +453,6 @@ var islanders_zz = function () {
     map: map,
     filter: filter,
     forEach: forEach,
+    isFunction: isFunction,
   }
 }()
