@@ -149,6 +149,17 @@ var islanders_zz = function () {
     return res
   }
 
+  function lastIndexOf(array, value, fromIndex = array.length - 1) {
+    for (let i = fromIndex; i >= 0; i--) {
+      if (array[i] === value) return i
+    }
+    return -1
+  }
+
+  function nth(array, n = 0) {
+    return array[(n + array.length) % array.length]
+  }
+
   /* Lang */
 
   function isEqual(value, other) {
@@ -393,5 +404,7 @@ var islanders_zz = function () {
     findIndex: findIndex,
     findLastIndex: findLastIndex,
     fromPairs: fromPairs,
+    lastIndexOf: lastIndexOf,
+    nth: nth,
   }
 }()
