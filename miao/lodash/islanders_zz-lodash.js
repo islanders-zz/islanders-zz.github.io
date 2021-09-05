@@ -193,6 +193,15 @@ var islanders_zz = function () {
     return res
   }
 
+  function difference(array, ...values) {
+    let temp = [].concat(...values)
+    let res = []
+    array.forEach((item) => {
+      if (!temp.includes(item)) res.push(item)
+    })
+    return res
+  }
+
   /* Lang */
 
   function isEqual(value, other) {
