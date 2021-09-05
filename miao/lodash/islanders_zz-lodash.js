@@ -206,6 +206,23 @@ var islanders_zz = function () {
     return array.concat(...values)
   }
 
+  /* String */
+
+  function repeat(string = '', n = 1) {
+    let res = ''
+    for (let i = 0; i < n; i++) {
+      res += string
+    }
+    return res
+  }
+
+  /* Number */
+
+  function clamp(number, lower, upper) {
+    if (number < lower) return lower
+    else if (number > upper) return upper
+    else return number
+  }
 
   /* Lang */
 
@@ -338,6 +355,14 @@ var islanders_zz = function () {
       else object = object[path[i]]
     }
     return object
+  }
+
+  function keys(object) {
+    let res = []
+    for (let key in object) {
+      if (object.hasOwnProperty(key)) res.push(key)
+    }
+    return res
   }
 
   /* Collection */
@@ -523,5 +548,8 @@ var islanders_zz = function () {
     chunk: chunk,
     difference: difference,
     concat: concat,
+    repeat: repeat,
+    clamp: clamp,
+    keys: keys,
   }
 }()
