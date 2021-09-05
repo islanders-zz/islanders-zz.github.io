@@ -73,9 +73,7 @@ var islanders_zz = function () {
   }
 
   function drop(array, n = 1) {
-    if (n <= 0) return array
-    if (n >= array.length) return []
-    return array.slice(n - 1, array.length)
+    return array.slice(n)
   }
 
   function dropRight(array, n = 1) {
