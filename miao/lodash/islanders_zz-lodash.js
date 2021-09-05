@@ -69,7 +69,7 @@ var islanders_zz = function () {
 
   function join(array, separator = ',') {
     if (array.length <= 0) return ""
-    return array.reduce((acc, item, index, array) => acc + separator + String(item))
+    return array.reduce((acc, item, index, array) => String(acc) + String(separator) + String(item))
   }
 
   function drop(array, n = 1) {
