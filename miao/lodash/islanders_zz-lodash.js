@@ -323,5 +323,6 @@ var islanders_zz = function () {
     join: join,
     drop: drop,
     dropRight: dropRight,
+    dropWhile: dropWhile,
   }
 }()
