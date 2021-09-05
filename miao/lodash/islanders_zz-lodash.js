@@ -365,6 +365,12 @@ var islanders_zz = function () {
     return res
   }
 
+  function keysIn(object) {
+    let res = []
+    for (let key in object) res.push(key)
+    return res
+  }
+
   /* Collection */
 
   function map(collection, predicate) {
@@ -551,5 +557,6 @@ var islanders_zz = function () {
     repeat: repeat,
     clamp: clamp,
     keys: keys,
+    keysIn: keysIn,
   }
 }()
