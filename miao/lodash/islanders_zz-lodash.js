@@ -216,6 +216,19 @@ var islanders_zz = function () {
     return res
   }
 
+  function escape(string = '') {
+    let res = ''
+    for (let i = 0; i < string.length; i++) {
+      if (string[i] === '<') res += '&lt;'
+      else if (string[i] === '>') res += '&gt;'
+      else if (string[i] === '&') res += '&amp;'
+      else if (string[i] === `'`) res += '&apos'
+      else if (string[i] === `"`) res += '&quot;'
+      else res += string[i]
+    }
+    return res
+  }
+
   /* Number */
 
   function clamp(number, lower, upper) {
@@ -558,5 +571,6 @@ var islanders_zz = function () {
     clamp: clamp,
     keys: keys,
     keysIn: keysIn,
+    escape: escape,
   }
 }()
