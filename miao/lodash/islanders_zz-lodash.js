@@ -19,9 +19,9 @@ var islanders_zz = function () {
   function toPath(value) {
     if (Array.isArray(value)) return value
     else {
-      let res = value.split(/]\[|]\.|\[|\.|\]/)
-      if (res[0] === '') res.shift()
-      if (res[res.length - 1] == '') res.pop()
+      let res = value.split(/]\[|]\.|\[|\.|\]/)     // 要2] => [2, '']
+      if (res[0] === '') res.shift()      
+      if (res[res.length - 1] == '') res.pop()    // 处理空的情况
       return res
     }
   }
@@ -366,11 +366,15 @@ var islanders_zz = function () {
 
   /* Object */
 
-  function get(object, path, defaultValue) {
+  function get(object, path, defaultValue = undefined) {
     path = toPath(path)
     for (let i = 0; i < path.length; i++) {
-      if (object[path[i]] == undefined) return defaultValue
-      else object = object[path[i]]
+      if (object == undefined) {
+       return defaultValue
+      }
+      else {
+        object = object[path[i]] 
+      }
     }
     return object
   }
@@ -428,7 +432,7 @@ var islanders_zz = function () {
 
   function some(collection, predicate) {
     predicate = iteratee(predicate)
-    for (let value of collection) {
+    for (let value of collection) {     // 注意for of遍历的是值 而不是key
       if (predicate(value)) return true
     }
     return false
