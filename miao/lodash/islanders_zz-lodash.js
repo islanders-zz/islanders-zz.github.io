@@ -28,8 +28,8 @@ var islanders_zz = function () {
 
   function property(path) {
     return function (object) {
-      return object[path]
-      // return get(object, path)
+      // return object[path]
+      return get(object, path)
     }
   }
 
