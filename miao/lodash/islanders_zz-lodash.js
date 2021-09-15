@@ -207,6 +207,16 @@ var islanders_zz = function () {
     return res
   }
 
+  function differenceBy(array, values, predicate) {
+    predicate = iteratee(predicate)
+    let temp = values.map(item => predicate(item))
+    let res = []
+    array.forEach((item) => {
+      if (!temp.includes(predicate(item))) res.push(item)
+    })
+    return res
+  }
+
   function concat(array, ...values) {
     return array.concat(...values)
   }
@@ -581,5 +591,6 @@ var islanders_zz = function () {
     keys: keys,
     keysIn: keysIn,
     escape: escape,
+    differenceBy: differenceBy,
   }
 }()
