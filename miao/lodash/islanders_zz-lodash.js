@@ -18,7 +18,12 @@ var islanders_zz = function () {
 
   function toPath(value) {
     if (Array.isArray(value)) return value
-    else return value.split(/]\[|]\.|\[|\./)
+    else {
+      let res = value.split(/]\[|]\.|\[|\.|\]/)
+      if (res[0] === '') res.shift()
+      if (res[res.length - 1] == '') res.pop()
+      return res
+    }
   }
 
   function property(path) {
@@ -142,8 +147,8 @@ var islanders_zz = function () {
   function fromPairs(pairs) {
     let res = {}
     pairs.forEach((item, index, pairs) => {
-      key = item[0]
-      value = item[1]
+      let key = item[0]
+      let value = item[1]
       res[key] = value
     })
     return res
