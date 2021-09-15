@@ -207,15 +207,23 @@ var islanders_zz = function () {
     return res
   }
 
-  function differenceBy(array, values, predicate) {
-    predicate = iteratee(predicate)
-    let temp = values.map(item => predicate(item))
-    let res = []
-    array.forEach((item) => {
-      if (!temp.includes(predicate(item))) res.push(item)
-    })
-    return res
+  function differenceBy(array, ...values) { // 注意这个的传入参数的过程
+    let predicate = values[values.length - 1]
+    if (Array.isArray(predicate)) {
+      return difference(array, ...values)
+    }
+    else {
+      values.pop()
+      predicate = iteratee(predicate)
+      let temp = values.flat().map(item => predicate(item)) //要去扁平化数组
+      let res = []
+      array.forEach((item) => {
+        if (!temp.includes(predicate(item))) res.push(item)
+      })
+      return res
+    }
   }
+
 
   function differenceWith(array, values, comparator) {
     let res = []
