@@ -217,6 +217,22 @@ var islanders_zz = function () {
     return res
   }
 
+  function differenceWith(array, values, comparator) {
+    let res = []
+    for (let i = 0; i < array.length; i++) {
+      let flag = true
+      let item = array[i]
+      for (let j = 0; j < values.length; j++) {
+        if (comparator(item, values[j])) {
+          flag = false
+          break
+        }
+      }
+      if (flag) res.push(item)
+    }
+    return res
+  }
+
   function concat(array, ...values) {
     return array.concat(...values)
   }
@@ -592,5 +608,6 @@ var islanders_zz = function () {
     keysIn: keysIn,
     escape: escape,
     differenceBy: differenceBy,
+    differenceWith: differenceWith,
   }
 }()
