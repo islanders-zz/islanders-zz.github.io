@@ -428,7 +428,7 @@ var islanders_zz = function () {
 
   function some(collection, predicate) {
     predicate = iteratee(predicate)
-    for (let key in collection) {
+    for (let key of collection) {
       if (predicate(collection[key], key, collection)) return true
     }
     return false
