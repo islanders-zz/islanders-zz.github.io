@@ -269,6 +269,15 @@ var islanders_zz = function () {
     return res
   }
 
+  function startsWith(string, target, positon = 0) {
+    return string.substr(positon, target.length) === target
+  }
+
+
+  function endsWith(string, target, positon = string.length) {
+    return string.substr(positon - target.length ,target.length) === target
+  }
+
   /* Number */
 
   function clamp(number, lower, upper) {
@@ -619,5 +628,7 @@ var islanders_zz = function () {
     escape: escape,
     differenceBy: differenceBy,
     differenceWith: differenceWith,
+    startsWith: startsWith,
+    endsWith: endsWith,
   }
 }()
