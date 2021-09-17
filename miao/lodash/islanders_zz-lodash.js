@@ -500,6 +500,12 @@ var islanders_zz = function () {
     return true
   }
 
+  function find(collection, predicate, fromIndex = 0) {
+    predicate = iteratee(predicate)
+    for (let i = fromIndex; i < collection.length; i++) {
+      if (predicate(collection[i])) return collection[i]
+    }
+  }
   /* Math */
 
   function add(augend, addend) {
@@ -640,5 +646,6 @@ var islanders_zz = function () {
     startsWith: startsWith,
     endsWith: endsWith,
     without: without,
+    find: find,
   }
 }()
