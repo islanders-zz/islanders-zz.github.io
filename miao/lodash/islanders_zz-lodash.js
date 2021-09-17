@@ -643,6 +643,7 @@ var islanders_zz = function () {
     map: map,
     filter: filter,
     forEach: forEach,
+    forEachRight: forEachRight,
     isFunction: isFunction,
     size: size,
     every: every,
