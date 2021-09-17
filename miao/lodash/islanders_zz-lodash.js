@@ -243,9 +243,18 @@ var islanders_zz = function () {
   }
 
   function concat(array, ...values) {
-    return array.concat(...values)
+    return array.concat(...values)  // 重新写一下
   }
 
+
+  function without(array, ...values) {
+    let temp = [].concat(...values)
+    let res = []
+    array.forEach((item, index, array) => {
+      if (!temp.includes(item)) res.push(item)
+    })
+    return res
+  }
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -630,5 +639,6 @@ var islanders_zz = function () {
     differenceWith: differenceWith,
     startsWith: startsWith,
     endsWith: endsWith,
+    without: without,
   }
 }()
