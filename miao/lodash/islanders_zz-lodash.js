@@ -521,6 +521,15 @@ var islanders_zz = function () {
       if (predicate(collection[i])) return collection[i]
     }
   }
+
+  function reject(collection, predicate) {
+    let res = []
+    predicate = iteratee(predicate)
+    for (let item of collection) {
+      if (!predicate(item)) res.push(item)
+    }
+    return res
+  }
   /* Math */
 
   function add(augend, addend) {
@@ -664,5 +673,6 @@ var islanders_zz = function () {
     without: without,
     find: find,
     findLast: findLast,
+    reject: reject,
   }
 }()
