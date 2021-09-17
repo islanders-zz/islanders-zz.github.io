@@ -475,6 +475,14 @@ var islanders_zz = function () {
     return collection
   }
   
+  function forEachRight(collection, predicate) {
+    predicate = iteratee(predicate)
+    for (let i = collection.length - 1; i >= 0; i--) {
+      predicate(collection[i], i, collection)
+    }
+    return collection
+  }
+  
   function size(collection) {
     if (Array.isArray(collection) || typeof collection === 'string') return collection.length
     else {
