@@ -506,6 +506,13 @@ var islanders_zz = function () {
       if (predicate(collection[i])) return collection[i]
     }
   }
+
+  function findLast(collection, predicate, fromIndex = collection.length - 1) {
+    predicate = iteratee(predicate)
+    for (let i = fromIndex; i >= 0; i--) {
+      if (predicate(collection[i])) return collection[i]
+    }
+  }
   /* Math */
 
   function add(augend, addend) {
@@ -647,5 +654,6 @@ var islanders_zz = function () {
     endsWith: endsWith,
     without: without,
     find: find,
+    findLast: findLast,
   }
 }()
