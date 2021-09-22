@@ -269,6 +269,23 @@ var islanders_zz = function () {
     })
     return res
   }
+
+  
+  function flattenDeep(array) { // 递归写法
+    let res = []
+    array.forEach((item, index, array) => {
+      if (!Array.isArray(item)) {
+        res.push(item)
+      } else {
+        let temp = flattenDeep(item)
+        temp.forEach((it, index, temp) => {
+          res.push(it)
+        })
+      }
+    })
+    return res
+  }
+
   /* String */
 
   function repeat(string = '', n = 1) {
