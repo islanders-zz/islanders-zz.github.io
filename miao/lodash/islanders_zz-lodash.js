@@ -255,6 +255,20 @@ var islanders_zz = function () {
     })
     return res
   }
+
+  function flatten(array) {
+    let res = []
+    array.forEach((item, index, array) => {
+      if (!Array.isArray(item)) {
+        res.push(item)
+      } else {
+        for (let it of item) {
+          res.push(it)
+        }
+      }
+    })
+    return res
+  }
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -674,5 +688,6 @@ var islanders_zz = function () {
     find: find,
     findLast: findLast,
     reject: reject,
+    flatten: flatten,
   }
 }()
