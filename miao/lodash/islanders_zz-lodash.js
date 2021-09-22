@@ -286,6 +286,14 @@ var islanders_zz = function () {
     return res
   }
 
+  function flattenDepth(array, depth = 1) {
+    let res = array
+    while (depth--) {
+      res = flatten(res)
+    }
+    return res
+  }
+
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -706,5 +714,7 @@ var islanders_zz = function () {
     findLast: findLast,
     reject: reject,
     flatten: flatten,
+    flattenDeep: flattenDeep,
+    flattenDepth: flattenDepth,
   }
 }()
