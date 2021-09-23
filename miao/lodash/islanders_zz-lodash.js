@@ -359,6 +359,16 @@ var islanders_zz = function () {
     return pull(array, values)
   }
 
+  function pullAllBy(array, values, predicate) {
+    predicate = iteratee(predicate)
+    let len = array.length
+    let temp = values.map(predicate)
+    for (let i = 0; i < len; i++){
+      let item = array.shift()
+      if (!temp.includes(predicate(item))) array.push(item) 
+    }
+    return array
+  }
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -786,5 +796,6 @@ var islanders_zz = function () {
     intersectionWith: intersectionWith,
     pull: pull,
     pullAll: pullAll,
+    pullAllBy: pullAllBy,
   }
 }()
