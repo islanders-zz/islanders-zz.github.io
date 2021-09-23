@@ -329,6 +329,19 @@ var islanders_zz = function () {
     }
     return res
   }
+
+  function intersectionWith(...arrays) {
+    let predicate = iteratee(arrays.pop())
+    let array = arrays.shift()
+    let other = arrays.shift()
+    let res = []
+    array.forEach((item) => {
+      other.forEach((it) => {
+        if (predicate(item, it)) res.push(item)
+      })
+    })
+    return res
+  }
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -753,5 +766,6 @@ var islanders_zz = function () {
     flattenDepth: flattenDepth,
     intersection: intersection,
     intersectionBy: intersectionBy,
+    intersectionWith: intersectionWith,
   }
 }()
