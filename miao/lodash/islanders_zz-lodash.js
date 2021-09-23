@@ -386,6 +386,21 @@ var islanders_zz = function () {
     }
     return array
   }
+
+  function pullAt(array, ...index) {
+    let indexes = [].concat(...index)
+    let res = []
+    let len = array.length
+    for (let i = 0; i < len; i++) {
+      let item = array.shift()
+      if (indexes.includes(i)) {
+        res.push(item)
+      } else {
+        array.push(item)
+      }
+    }
+    return res
+  }
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -815,5 +830,6 @@ var islanders_zz = function () {
     pullAll: pullAll,
     pullAllBy: pullAllBy,
     pullAllWith: pullAllWith,
+    pullAt: pullAt,
   }
 }()
