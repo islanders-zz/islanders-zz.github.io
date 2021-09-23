@@ -311,6 +311,24 @@ var islanders_zz = function () {
     return res
   }
 
+  function intersectionBy(...arrays) {
+    let predicate = iteratee(arrays.pop())
+    let array = arrays.shift()
+    let res = []
+    let temp = arrays.map(item => item.map(it => predicate(it)))
+    for (let i = 0; i < array.length; i++) {
+      let item = array[i]
+      let flag = true
+      for (let j = 0; j < temp.length; j++) {
+        if (!temp[j].includes(predicate(item))) {
+          flag = false
+          break
+        }
+      }
+      if (flag) res.push(item)
+    }
+    return res
+  }
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -734,5 +752,6 @@ var islanders_zz = function () {
     flattenDeep: flattenDeep,
     flattenDepth: flattenDepth,
     intersection: intersection,
+    intersectionBy: intersectionBy,
   }
 }()
