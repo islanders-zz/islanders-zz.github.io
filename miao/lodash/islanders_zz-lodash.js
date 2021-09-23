@@ -294,6 +294,23 @@ var islanders_zz = function () {
     return res
   }
 
+  function intersection(...arrays) {
+    let array = arrays.shift()
+    let res = []
+    for (let i = 0; i < array.length; i++){
+      let item = array[i]
+      let flag = true
+      for (let j = 0; j < arrays.length; j++){
+        if (!arrays[j].includes(item)) {
+          flag = false
+          break
+        }
+      }
+      if (flag) res.push(item)
+    }
+    return res
+  }
+
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -716,5 +733,6 @@ var islanders_zz = function () {
     flatten: flatten,
     flattenDeep: flattenDeep,
     flattenDepth: flattenDepth,
+    intersection: intersection,
   }
 }()
