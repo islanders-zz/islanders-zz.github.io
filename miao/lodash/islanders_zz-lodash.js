@@ -342,6 +342,22 @@ var islanders_zz = function () {
     })
     return res
   }
+
+  function pull(array, ...values) {
+    let value = [].concat(...values)
+    let len = array.length
+    for (let i = 0; i < len; i++) {
+      let item = array.shift()
+      if (!value.includes(item)) {
+        array.push(item)
+      }
+    }
+    return array
+  }
+
+  function pullAll(array, values) {
+    return pull(array, values)
+  }
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -767,5 +783,6 @@ var islanders_zz = function () {
     intersection: intersection,
     intersectionBy: intersectionBy,
     intersectionWith: intersectionWith,
+    pull: pull,
   }
 }()
