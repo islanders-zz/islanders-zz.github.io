@@ -369,6 +369,23 @@ var islanders_zz = function () {
     }
     return array
   }
+
+  function pullAllWith(array, values, predicate) {
+    predicate = iteratee(predicate)
+    let len = array.length
+    for (let i = 0; i < len; i++){
+      let item = array.shift()
+      let flag = true
+      for (let j = 0; j < values.length; j++) {
+        if (predicate(item, values[j])) {
+          flag = false
+          break
+        }
+      }
+      if (flag) array.push(item)
+    }
+    return array
+  }
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -797,5 +814,6 @@ var islanders_zz = function () {
     pull: pull,
     pullAll: pullAll,
     pullAllBy: pullAllBy,
+    pullAllWith: pullAllWith,
   }
 }()
