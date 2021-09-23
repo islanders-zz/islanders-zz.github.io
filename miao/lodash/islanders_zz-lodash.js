@@ -358,6 +358,7 @@ var islanders_zz = function () {
   function pullAll(array, values) {
     return pull(array, values)
   }
+
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -784,5 +785,6 @@ var islanders_zz = function () {
     intersectionBy: intersectionBy,
     intersectionWith: intersectionWith,
     pull: pull,
+    pullAll: pullAll,
   }
 }()
