@@ -177,6 +177,25 @@ var islanders_zz = function () {
     return Array.from(new Set(array))
   }
 
+  function uniqBy(array, predicate) {
+    predicate = iteratee(predicate)
+    let res = []
+    let seen = []
+    array.forEach((item) => {
+      if (res.length === 0) {
+        res.push(item)
+        seen.push(predicate(item))
+      }
+      else {
+        if (!seen.includes(predicate(item))) {
+          res.push(item)
+          seen.push(predicate(item))
+        } 
+      }
+    })
+    return res
+  }
+
   function chunk(array, size = 1) {
     let len = Math.ceil(array.length / size)
     let res = new Array(len)
