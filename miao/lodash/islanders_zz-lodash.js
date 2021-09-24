@@ -411,6 +411,16 @@ var islanders_zz = function () {
     return res
   }
 
+  function unionBy(...arrays) {
+    let predicate = iteratee(arrays.pop())
+    let temp = [].concat(...arrays)
+    let res = []
+    temp.forEach((item) => {
+      if(!res.map(predicate).includes(predicate(item))) res.push(item)
+    })
+    return res
+  }
+
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -842,5 +852,6 @@ var islanders_zz = function () {
     pullAllWith: pullAllWith,
     pullAt: pullAt,
     union: union,
+    unionBy: unionBy,
   }
 }()
