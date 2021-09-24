@@ -196,6 +196,17 @@ var islanders_zz = function () {
     return res
   }
 
+  function uniqWith(array, predicate) {
+    predicate = iteratee(predicate)
+    let res = []
+    array.forEach((item) => {
+      if (!res.some((it) => {               // 非some 就是都不满足条件
+          return predicate(it, item)        // some是有一项满足 为true
+        })) res.push(item)
+    })
+    return res
+  }
+
   function chunk(array, size = 1) {
     let len = Math.ceil(array.length / size)
     let res = new Array(len)
