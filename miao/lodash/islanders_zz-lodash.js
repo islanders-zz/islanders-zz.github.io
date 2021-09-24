@@ -401,6 +401,16 @@ var islanders_zz = function () {
     }
     return res
   }
+
+  function union(...arrays) {
+    let temp = [].concat(...arrays)
+    let res = []
+    temp.forEach((item) => {
+      if (!res.includes(item)) res.push(item)
+    })
+    return res
+  }
+
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -831,5 +841,6 @@ var islanders_zz = function () {
     pullAllBy: pullAllBy,
     pullAllWith: pullAllWith,
     pullAt: pullAt,
+    union: union,
   }
 }()
