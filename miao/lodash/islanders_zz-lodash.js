@@ -421,6 +421,25 @@ var islanders_zz = function () {
     return res
   }
 
+  function unionWith(...arrays) {
+    let predicate = iteratee(arrays.pop())
+    let temp = [].concat(...arrays)
+    let res = []
+    temp.forEach((item) => {
+      if (res.length === 0) {
+        res.push(item)
+      }
+      else {
+        let cnt = 0
+        for (let i = 0; i < res.length; i++){
+          if (!predicate(item,res[i])) cnt++
+        }
+        if (cnt === res.length) res.push(item)
+      }
+    })
+    return res
+  }
+
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -853,5 +872,6 @@ var islanders_zz = function () {
     pullAt: pullAt,
     union: union,
     unionBy: unionBy,
+    unionWith: unionWith,
   }
 }()
