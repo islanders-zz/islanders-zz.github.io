@@ -903,5 +903,7 @@ var islanders_zz = function () {
     union: union,
     unionBy: unionBy,
     unionWith: unionWith,
+    uniqWith: uniqWith,
+    uniqBy: uniqBy,
   }
 }()
