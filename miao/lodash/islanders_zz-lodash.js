@@ -470,6 +470,28 @@ var islanders_zz = function () {
     return res
   }
 
+  function zip(...arrays) {
+    let itemlen = arguments.length
+    let cnt = arguments[0].length
+    let res = []
+    for (let i = 0; i < cnt; i++){
+      res[i] = new Array(itemlen)
+      for (let j = 0; j < itemlen; j++){
+        res[i][j] = arguments[j][i] 
+      }
+    }
+    return res
+  }
+
+  function zipObject(props, values) {
+    let res = {}
+    let len = props.length
+    for (let i = 0; i < len; i++){
+      res[props[i]] = values[i]
+    }
+    return res
+  }
+
   /* String */
 
   function repeat(string = '', n = 1) {
@@ -905,5 +927,7 @@ var islanders_zz = function () {
     unionWith: unionWith,
     uniqWith: uniqWith,
     uniqBy: uniqBy,
+    zip: zip,
+    zipObject: zipObject,
   }
 }()
