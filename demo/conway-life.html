@@ -136,15 +136,14 @@
   })
 
   function random(){
-    console.log(1)
-    c.randomFill(0.3)
+    let num = window.prompt("请输入随机生成的细胞百分比", 30) 
+    c.randomFill(Number(num)/ 100)
     c.gen = 0
     gen.textContent = c.gen
     div.innerHTML = c.printWorldToHTML()
   }
 
   function zero() {
-    console.log('1111')
     c.randomFill(0)
     c.gen = 0
     gen.textContent = c.gen
