@@ -7,6 +7,7 @@
   <title>康威生命游戏</title>
 </head>
 <body>
+  <h2>康威生命游戏</h2>
   <div><span>generation:  </span><span id="gen"></span></div>
   <div id="world"></div>
   <button onclick="next()">Next</button>
@@ -119,7 +120,7 @@
   
   let div = document.querySelector('#world')
   let gen = document.querySelector('#gen')
-  let c = new Conway(15, 15)
+  let c = new Conway(16, 16)
 
   gen.textContent = c.gen
   // c.randomFill(0.3)

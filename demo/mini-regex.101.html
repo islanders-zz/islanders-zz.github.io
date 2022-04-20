@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <style>
+    input[type="text"],
+    textarea {
+      width: 300px;
+    }
+  
+    label {
+      font-family: consolas;
+      cursor: pointer;
+    }
+  
+    label input {
+      cursor: pointer;
+    }
+  
+    em {
+      background-color: #9fcfff;
+      font-style: normal;
+    }
+  
+    em:nth-of-type(even) {
+      background-color: #d5ebff;
+    }
+  
+    em:empty {
+      border-left: 1px dashed red;
+      border-right: 1px dashed red;
+      height: 1.2em;
+      margin-left: -1px;
+      margin-right: -1px;
+      background-color: transparent;
+    }
+  
+    section {
+      width: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    section textarea,
+    section pre {
+      line-height: 1.3;
+      display: block;
+      padding: 5px;
+      border: 2px solid;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: consolas;
+      font-size: 16px;
+      white-space: pre-wrap;
+      overflow-y: scroll;
+      word-break: break-all;
+    }
+  
+    section textarea {
+      position: relative;
+      z-index: 8;
+      background-color: transparent;
+    }
+  
+    section pre {
+      color: transparent;
+      position: absolute;
+      top: 0;
+    }
+  
+    p#regError {
+      color: red;
+      margin: 5px;
+      height: 1em;
+    }
+
+    pre#replaceResult {
+      width: 300px;
+      display: block;
+      height: 222px;
+      box-sizing: border-box;
+      font-size: 16px;
+      border: 2px solid;
+      white-space: pre-wrap;
+      font-family: consolas;
+      word-break: break-all;
+      overflow-y: scroll;
+      padding: 5px;
+      margin: 0;
+
+    }
+  </style>
+<body>
+  <div>
+    <header></header>
+    <h1>Mini-Regex101</h1>
+    <div>
+      请输入正则表达式：
+      <label><input type="checkbox" id="i">i</label>
+      <label><input type="checkbox"  checked id="g">g</label>
+      <label><input type="checkbox" id="m">m</label>
+      <label><input type="checkbox" id="y">y</label>
+      <label><input type="checkbox" id="u">u</label>
+      <label><input type="checkbox" id="s">s</label>
+      <br>
+      <input type="text" id="reg" value="foo" oninput="run()">
+      <br>
+      <p id="regError"></p>
+      请输入内容: <br>
+      <section>
+        <pre id="result"></pre>
+        <textarea id="strInput" cols="30"rows="10" onscroll="syncScrollPos()" oninput="run()" spellcheck="false">foobarbaz aaabbccc
+        ddddoofob foa foceeefoofsl lksdjf
+        129842 foo
+        sd942034 234 lsfowe
+        </textarea>
+      </section>
+      <br>
+      <div>
+        请输入替换字符串:
+        <br>
+        <input type="text" id="replaceStr" oninput="run()" value="baz">
+        <br>
+        <br>
+        替换后的结果:
+        <pre id="replaceResult"></pre>
+      </div>
+    </div>
+  </div>
+  <script>
+    function syncScrollPos() {
+      let scrollTop = strInput.scrollTop
+      result.scrollTop = scrollTop
+    }
+    
+    function getFlags() {
+      let flags = ""
+      if (i.checked) {
+        flags += "i"
+      }
+      if (g.checked) {
+        flags += "g"
+      }
+      if (m.checked) {
+        flags += "m"
+      }
+      if (y.checked) {
+        flags += "y"
+      } 
+      if (u.checked) {
+        flags += "u"
+      } 
+      if (s.checked) {
+        flags += "s"
+      }
+      return flags
+    }
+    function run() {
+      let re
+      let regSource = reg.value
+      let flags = getFlags()
+      if (regSource == '') {
+        result.innerHTML = ''
+        regError.innerHTML = 'Please input any regular exrpession.'
+        return
+      }
+      try {
+        re = new RegExp(regSource, flags)
+        regError.innerHTML = ''
+      } catch(e) {
+        regError.innerHTML = e.message
+        result.innerHTML = ''
+        return
+      }
+      let str = strInput.value
+      let match
+      if (re.global) {
+        let resultHTML = ''
+        let lastIndex = re.lastIndex
+        while(match = re.exec(str)) {
+          resultHTML += str.slice(lastIndex, match.index)
+          resultHTML += '<em>' + match[0] + '</em>'
+          lastIndex = re.lastIndex
+          if (match[0] == ""){
+            re.lastIndex++
+          }
+        }
+        resultHTML += str.slice(lastIndex)
+        result.innerHTML = resultHTML +'\n'
+      } else {
+        let resultHTML = ''
+        match = re.exec(str)
+        resultHTML += str.slice(0, match.index)
+        resultHTML += '<em>' + match[0] + '</em>'
+        resultHTML += str.slice(match[0].length + match.index)
+        result.innerHTML = resultHTML + '\n'
+      }
+
+      replaceResult.innerHTML = str.replace(re, replaceStr.value)
+    }
+
+    run()
+  </script>
+</body>
+</html>
